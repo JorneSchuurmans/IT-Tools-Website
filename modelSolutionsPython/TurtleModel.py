@@ -41,7 +41,7 @@ for i in range(30):
         x=(100-math.sqrt(40000+30000*R*R))/(2*R*R+2)
       else:
         x=(100+math.sqrt(40000+30000*R*R))/(2*R*R+2)
-    elif i > 17:
+    elif i > 14:
       x=(100-math.sqrt(40000+30000*R*R))/(2*R*R+2)
     else:
       x=(100+math.sqrt(40000+30000*R*R))/(2*R*R+2)
@@ -56,3 +56,4 @@ begin_fill()
 circle(50)
 end_fill()
 done()
+				
