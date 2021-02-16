@@ -1,4 +1,5 @@
-import graphics
+def toonSpel(veld):
+  return "dit staat in de javascript voorgeprogrameerd"
 
 def maakLeegVeld():
   aantalX, aantalY = (7, 6) 
@@ -10,7 +11,7 @@ def plaatsBlokje(kolom, speler):
   for i in range(6):
     if veld[kolom][i] == 0:
       veld[kolom][i] = speler
-      graphics.toonSpel(veld)
+      toonSpel(veld)
       return True
   return False
   
@@ -59,22 +60,26 @@ def checkDiagonaal():
           if veld[x][y] == veld[x+i][y-i] and veld[x][y] != 0:
             teller+=1
             if teller >= 3:
-             return True
+              return True
       teller = 0
   return False
 
 def main():
+  speler = 0
   end = False
   while end == False:
-    for speler in range(1, 3):
-      test = False
-      while test == False:
-        test = plaatsBlokje(int(input("speler "+str(speler)+":"))-1,speler)
-      end = checkWin()
-    
+    if speler == 1:
+      speler = 2
+    else:
+      speler = 1
+    test = False
+    while test == False:
+      test = plaatsBlokje(int(input("speler "+str(speler)+":\r"))-1,speler)
+    end = checkWin()
+  print("speler "+str(speler)+" wint\r")
   return
 
 
 veld = maakLeegVeld()
-graphics.toonSpel(veld)
+toonSpel(veld)
 main()  
