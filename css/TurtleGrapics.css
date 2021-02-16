@@ -78,45 +78,28 @@ header nav a{
 }
 
 
-.blokje0 {
-	height: 50px;
-	width: 50px; 
-	background-color: lightGray;
-	border-radius: 25px;
-}
-
-.blokje1 {
-	height: 50px;
-	width: 50px; 
-	background-color: Red;
-	border-radius: 25px;
-}
-
-.blokje2 {
-	height: 50px;
-	width: 50px; 
-	background-color: Yellow;
-	border-radius: 25px;
-}
-
 .CodeMirror {
 	height: auto;
 	width: auto;
 }
 
 #game{
-	height: 60%;
+	height: 70%;
 	border-bottom: 2px solid black;
-}
-#game table
-{
-	margin: auto;
-	padding: 15px;
-	background-color: #003469;
+	min-width: 400px;
+	min-height: 400px;
 }
 
+#myCanvas{
+	height: 100%;
+	min-width: 400px;
+	min-height: 400px;
+	width: 100%;
+}
+
+
 #outputWindow{
-	height: 40%;
+	height: 30%;
 }
 
 #output{
