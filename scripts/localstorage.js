@@ -1,11 +1,11 @@
-function save()
+function save(id)
 {
-	localStorage.setItem('myProgram',editor.getValue());
+	localStorage.setItem(id,editor.getValue());
 }
 
-function load()
+function load(id)
 {
-	var myProgram = localStorage.getItem('myProgram');
+	var myProgram = localStorage.getItem(id);
 	editor.setValue(myProgram) ;
 }
 

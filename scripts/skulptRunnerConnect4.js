@@ -16,7 +16,7 @@ function builtinRead(x) {
 // configure the output function
 // call Sk.importMainWithBody()
 function runit() { 
-	save();
+	save('myConnect4');
    var prog = preProgrammedGrapics + editor.getValue(); 
    var mypre = document.getElementById("output"); 
    mypre.innerHTML = ''; 
