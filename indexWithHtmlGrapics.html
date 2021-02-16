@@ -1,0 +1,110 @@
+<html> 
+<head> 
+<!--include de scripts voor skulpt (de python to javascript translator)-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script> 
+<script src="http://www.skulpt.org/js/skulpt.min.js" type="text/javascript"></script> 
+<script src="http://www.skulpt.org/js/skulpt-stdlib.js" type="text/javascript"></script> 
+<script src="scripts/skulptRunnerForHtmlGrapics.js" type="text/javascript"> </script> 
+<!-- einde -->
+<!-- include de scripts voor CodeMirror-->
+<script src="scripts/codemirror/lib/codemirror.js" type="text/javascript"></script>
+<link rel="stylesheet" href="scripts/codemirror/lib/codemirror.css">
+<script src="scripts/codemirror/mode/python/python.js" type="text/javascript"></script>
+<!-- einde -->
+<!-- include onze scripts-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<script src="scripts/localstorage.js" type="text/javascript"></script>
+<link rel="stylesheet" href="css/indexWithHtmlGrapics.css">
+
+<!-- einde-->
+
+</head> 
+
+<body> 
+	<header>
+			<h1>PYTHON WORKSHOP</h1>
+			<nav>
+				<a>TicTacToe</a>
+				<a>TurtleGrapics</a>
+			</nav>
+	</header>
+	<div class="content">
+		<div class="python">
+			<div class="pythonCollum" id="collum1">
+				<form> 
+						<div id="editor">
+							<textarea id="yourcode" >
+	
+							</textarea><br /> 
+						</div>
+					<button type="button" onclick="runit()">Run</button> 
+					<button type="button" onclick="save()">Save</button> 
+				</form> 
+			</div>
+			<div class="pythonCollum">
+				<div id="game"></div> 
+				<div id="outputWindow">
+					<textarea id="output"  disabled="yes"></textarea> 
+				</div>
+			</div>
+		</div>
+		
+		<div id="documentatie">
+			<div id="documentatieNav">
+				<form>
+					<button type="button"onclick="maakZichtbaar('variabele')">Variabele</button>
+					<button type="button" onclick="maakZichtbaar('herhalingen')">Herhalingen</button>
+					<button type="button" onclick="maakZichtbaar('keuzes')">Condities</button>
+					<button type="button" onclick="maakZichtbaar('lijsten')">Lijsten</button>
+					<button type="button" onclick="maakZichtbaar('functies')">Functies</button>
+					<button type="button" onclick="maakZichtbaar('programmaLogica')">ProgrammaLogica</button>
+				</form>
+			</div>
+			<div id="documentatieContent">
+				<div id="variabele" class="visible">
+					<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et velit magna. Mauris rutrum tristique odio id pellentesque. Maecenas eget felis suscipit nisi egestas suscipit eu nec erat. Fusce et vehicula ex, et iaculis quam. Proin nec arcu quis neque facilisis convallis in nec ex. Mauris nec augue at sapien ornare sollicitudin. Maecenas bibendum tempus lorem et luctus. Morbi et feugiat urna. Mauris vulputate eros et massa luctus ultricies. Morbi non tellus augue. Mauris sit amet nisi vel erat cursus cursus a vitae eros. Donec ac odio ut libero bibendum iaculis. Aliquam finibus ultrices elementum.
+					</p>
+				</div>
+				<div id="herhalingen" class="invisible">
+					<p>
+					Fusce efficitur purus a risus sodales, a egestas nisl venenatis. Donec sit amet semper arcu, sed dapibus nisi. Integer dignissim nibh mi, et aliquam purus mollis non. Aenean a lorem ut metus convallis varius vitae id eros. Suspendisse sodales mauris eu turpis blandit tempor. Duis cursus metus nec est pulvinar, eu efficitur metus sagittis. Pellentesque aliquam tincidunt libero, at porttitor metus tempus ac. Quisque sed consequat nisi. Nunc lobortis nisl sit amet hendrerit maximus. Quisque gravida urna vel consectetur posuere. Proin porttitor mauris id nisl aliquet, sit amet fermentum metus ornare. Sed ac purus vestibulum, varius leo vitae, porttitor massa. Phasellus vitae rutrum lectus.
+					</p>
+				</div>
+				<div id="keuzes" class="invisible">
+					<p>
+					Nullam lobortis ornare fermentum. Sed diam justo, dapibus vitae aliquet ac, tempus a tortor. Mauris tincidunt arcu sed leo mattis imperdiet. Maecenas elit dolor, dignissim quis viverra at, vestibulum sit amet turpis. Curabitur dapibus posuere pellentesque. Ut a egestas eros. Quisque id convallis diam. Praesent varius maximus sem pharetra volutpat. Sed pulvinar accumsan lorem, eu dignissim orci dictum at. Aenean faucibus pulvinar nulla, in mattis sem eleifend a. In fringilla non neque ut cursus. Nam scelerisque accumsan ligula, non dapibus eros dictum hendrerit. Fusce consequat elit sed tortor ultricies, nec euismod nibh ullamcorper. Quisque mattis dignissim tristique.
+					</p>
+				</div>
+				<div id="lijsten" class="invisible">
+					<p>
+					Ut faucibus orci diam, nec pharetra lacus porttitor dignissim. Phasellus mollis aliquet viverra. Morbi vehicula venenatis lacus vitae efficitur. Sed non ligula ornare, venenatis nibh sed, facilisis libero. Nam aliquam maximus nulla in condimentum. Cras vestibulum dui vel enim viverra, sagittis sollicitudin mauris scelerisque. Nullam vestibulum nunc sit amet elit lacinia, quis eleifend velit lobortis. Aliquam sit amet enim ac lectus consequat molestie. Donec massa ante, elementum sed tempor at, condimentum ac sem. Sed felis erat, laoreet et pharetra id, mollis id nulla. Sed tincidunt eros et purus lacinia, ac mattis mauris facilisis. In hac habitasse platea dictumst. Morbi a libero ultrices nibh facilisis bibendum. Pellentesque sed ultrices velit.
+					</p>
+				</div>
+				<div id="functies" class="invisible">
+					<p>
+					Duis sodales elit ex, nec congue lectus rutrum at. Sed dictum nisl nulla, eu tincidunt lacus eleifend condimentum. Mauris rhoncus et libero congue ultricies. Phasellus faucibus in est non feugiat. Maecenas nec leo laoreet, porttitor lacus sed, fermentum lacus. Nam vulputate et nibh ut condimentum. Nunc lacinia est non ligula ullamcorper rutrum. Aliquam nec eros turpis. Sed eu congue justo. Mauris facilisis nisl purus, quis dapibus nibh feugiat sed. Aenean at mauris at tellus condimentum pellentesque vel sit amet tortor. Proin a est massa. Morbi massa leo, commodo volutpat tempor ac, porta et leo. Morbi vulputate arcu mi, et imperdiet risus tempor eget.
+					</p>
+				</div>
+				<div id="programmaLogica" class="invisible">
+					<p>
+					Morbi euismod euismod ligula a porttitor. Phasellus pellentesque quam in tempor ultrices. Donec sit amet sapien eu ante iaculis aliquet nec sed nunc. Ut non felis id massa pellentesque vehicula ac non orci. Nunc vulputate mauris non dictum aliquet. Quisque pretium tortor maximus, finibus eros non, iaculis odio. Suspendisse potenti. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent faucibus, enim vel ultrices dapibus, nibh libero convallis dolor, ac sodales urna erat nec lacus. Fusce efficitur facilisis metus at consectetur. Maecenas justo nibh, ultrices quis mauris vel, varius porta sem.
+					</p>
+				</div>
+			</div>
+		</div>
+</div>
+
+
+
+</body> 
+<script>
+  var editor = CodeMirror.fromTextArea(yourcode, {
+    lineNumbers: true
+	
+  });
+	load();
+</script>
+
+</html> 
