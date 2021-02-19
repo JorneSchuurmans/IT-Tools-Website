@@ -30,7 +30,7 @@ function runit() {
        console.log('success');
    },
        function(err) {
-		   err.traceback[0].lineno -= 18;
+		   err.traceback[0].lineno -= 17;
        outf(err.toString());
    });
 } 
@@ -39,19 +39,18 @@ var preProgrammedGrapics = `
 import document
 import time
 def toonSpel(spel):
-	game = document.getElementById('game')
-	game.innerHTML = "<table>"
-	for y in range(6):
-		game.innerHTML+="<tr>"
-		for x in range(7):
-			game.innerHTML += "<td>"
-			blokje = "<div class='blokje"
-			blokje += str(spel[x][5-y])
-			blokje += "'></div>"
-			game.innerHTML += blokje
-			game.innerHTML += "</td>"
-		game.innerHTML+="</tr>"
-	game.innerHTML += "</table>"
-	time.sleep(0)
+    game = document.getElementById('game')
+    game.innerHTML = "<table>"
+    for y in range(3):
+        game.innerHTML+="<tr>"
+        for x in range(3):
+            game.innerHTML += "<td>"
+            if spel[x][y] == 1 : game.innerHTML += "<div class='blokje'><p>X</p></div>"
+            elif spel[x][y] == 2 : game.innerHTML += "<div class='blokje'><p>O</p></div>"
+            else: game.innerHTML += "<div class='blokje'><p></p></div>"
+            game.innerHTML += "</td>"
+        game.innerHTML+="</tr>"
+    game.innerHTML += "</table>"
+    time.sleep(0)
 `
 
