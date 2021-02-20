@@ -2,8 +2,8 @@
 <head> 
 <!--include de scripts voor skulpt (de python to javascript translator)-->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script> 
-<script src="http://www.skulpt.org/js/skulpt.min.js" type="text/javascript"></script> 
-<script src="http://www.skulpt.org/js/skulpt-stdlib.js" type="text/javascript"></script> 
+<script src="scripts/skulpt_dist/skulpt.min.js" type="text/javascript"></script> 
+<script src="scripts/skulpt_dist/skulpt-stdlib.js" type="text/javascript"></script> 
 <script src="scripts/skulptRunnerConnect4.js" type="text/javascript"> </script> 
 <!-- include de scripts voor CodeMirror-->
 <script src="scripts/codemirror/lib/codemirror.js" type="text/javascript"></script>
@@ -101,11 +101,49 @@
 
 </body> 
 <script>
+	async:true
   var editor = CodeMirror.fromTextArea(yourcode, {
     lineNumbers: true
 	
   });
-	load('myConnect4');
+  load('myConnect4');
+  var basePath = 'scripts/pygame/';
+    Sk.externalLibraries = {
+        'pygame': {
+            path: basePath + '__init__.js',
+        },
+        'pygame.display': {
+            path: basePath + 'display.js',
+        },
+        'pygame.draw': {
+            path: basePath + 'draw.js',
+        },
+        'pygame.event': {
+            path: basePath + 'event.js',
+        },
+        'pygame.font': {
+            path: basePath + 'font.js',
+        },
+        'pygame.image': {
+            path: basePath + 'image.js',
+        },
+        'pygame.key': {
+            path: basePath + 'key.js',
+        },
+        'pygame.mouse': {
+            path: basePath + 'mouse.js',
+        },
+        'pygame.time': {
+            path: basePath + 'time.js',
+        },
+        'pygame.transform': {
+            path: basePath + 'transform.js',
+        },
+        'pygame.version': {
+            path: basePath + 'version.js',
+        },
+    };
+	Sk.main_canvas = document.createElement("canvas");
 </script>
 
 </html> 
