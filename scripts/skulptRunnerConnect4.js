@@ -74,10 +74,10 @@ def getMuisKolomNaClick():
         time.sleep(0.1)
     x = pygame.mouse.get_pos()[0]
     getal = (x-20)/50
-    if getal < 0: return 0
-    if getal > 6: return 6
     while pygame.mouse.get_pressed()[0] != 0:
         time.sleep(0.1)
+    if getal < 0: return 0
+    if getal > 6: return 6
     return getal
 
 `
