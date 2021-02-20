@@ -45,6 +45,7 @@
 			</div>
 			<div class="pythonCollum">
 				<div id="game"></div> 
+				
 				<div id="outputWindow">
 					<textarea id="output"  disabled="yes"></textarea> 
 				</div>
@@ -97,17 +98,19 @@
 		</div>
 </div>
 
-
+<canvas id="myCanvas"></canvas>
 
 </body> 
 <script>
-	async:true
-  var editor = CodeMirror.fromTextArea(yourcode, {
+  	var editor = CodeMirror.fromTextArea(yourcode, {
     lineNumbers: true
-	
-  });
-  load('myConnect4');
-  var basePath = 'scripts/pygame/';
+ 	 });
+
+	Sk.main_canvas = document.getElementById("myCanvas");
+
+  	load('myConnect4');
+
+  	var basePath = 'scripts/pygame/';
     Sk.externalLibraries = {
         'pygame': {
             path: basePath + '__init__.js',
@@ -143,7 +146,7 @@
             path: basePath + 'version.js',
         },
     };
-	Sk.main_canvas = document.createElement("canvas");
+	
 </script>
 
 </html> 
