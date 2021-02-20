@@ -104,6 +104,16 @@ header nav a{
 	width: auto;
 }
 
+#canvasContainer{
+	position: relative;
+	top: -360px;
+	z-index: 1;
+	width: 400px;
+	margin: auto;
+	height: 360px;;
+}
+
+
 #game{
 	height: 60%;
 	border-bottom: 2px solid black;
@@ -120,6 +130,8 @@ header nav a{
 }
 
 #output{
+	position: relative;
+	top: -360px;
 	padding: 5px;
 	width: 99%;
 	height: 99%;
