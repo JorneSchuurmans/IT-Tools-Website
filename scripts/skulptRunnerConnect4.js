@@ -30,9 +30,14 @@ function runit() {
        console.log('success');
    },
        function(err) {
-		   err.traceback[0].lineno -= 18;
+		   err.traceback[0].lineno -= 40;
        outf(err.toString());
    });
+} 
+
+function end() { 
+    save('myConnect4');
+    window.location.reload(true);
 } 
 
 var preProgrammedGrapics = `
@@ -41,6 +46,7 @@ import time
 
 import pygame
 from pygame import *
+pygame.quit()
 pygame.init()
 pygame.display.init()
 WINDOWWIDTH = 400
@@ -62,6 +68,18 @@ def toonSpel(spel):
 		game.innerHTML+="</tr>"
 	game.innerHTML += "</table>"
 	time.sleep(0)
+
+def getMuisKolomNaClick():
+    while pygame.mouse.get_pressed()[0] == 0:
+        time.sleep(0.1)
+    x = pygame.mouse.get_pos()[0]
+    getal = (x-20)/50
+    while pygame.mouse.get_pressed()[0] != 0:
+        time.sleep(0.1)
+    if getal < 0: return 0
+    if getal > 6: return 6
+    return getal
+
 `
 
 
