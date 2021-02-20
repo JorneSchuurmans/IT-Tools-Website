@@ -57,14 +57,19 @@ def checkDiagonaal():
 def main():
   speler = 0
   end = False
-  while end == False:
-    if speler == 1: speler = 2
-    else: speler = 1
-    while False == plaatsBlokje(int(input("speler "+str(speler)+":\r"))-1,speler): DoNotting()
+  while end == False: 
+    if speler != 1: speler = 1
+    else: speler = 2
+    geplaatst = False
+    print("speler "+str(speler)+" is aan de beurt")
+    while geplaatst == False:
+      kolom = getMuisKolomNaClick()
+      geplaatst = plaatsBlokje(kolom, speler)
     end = checkWin()
-  print("speler "+str(speler)+" wint\r")
+  print("speler "+str(speler)+" wint!")
   return
 
 veld = maakLeegVeld()
 toonSpel(veld)
-main() 
+main()
+pygame.quit()
