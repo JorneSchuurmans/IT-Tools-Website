@@ -105,12 +105,17 @@ header nav a{
 }
 
 #canvasContainer{
+	border: none !important;
 	position: relative;
 	top: -360px;
 	z-index: 1;
 	width: 400px;
 	margin: auto;
 	height: 360px;;
+}
+
+#myCanvas{
+	border: none !important;
 }
 
 
