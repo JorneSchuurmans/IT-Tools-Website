@@ -30,7 +30,7 @@ function runit() {
        console.log('success');
    },
        function(err) {
-		   err.traceback[0].lineno -= 18;
+		   err.traceback[0].lineno -= 40;
        outf(err.toString());
    });
 } 
