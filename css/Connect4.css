@@ -201,6 +201,7 @@ header nav a{
 }
 
 .invisible{
+	display: none;
 	visibility: hidden;
 	position: absolute;
 }
