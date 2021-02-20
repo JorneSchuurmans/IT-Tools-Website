@@ -38,6 +38,15 @@ function runit() {
 var preProgrammedGrapics = `
 import document
 import time
+
+import pygame
+from pygame import *
+pygame.init()
+pygame.display.init()
+WINDOWWIDTH = 400
+WINDOWHEIGHT = 350
+pygame.display.set_mode((WINDOWWIDTH, WINDOWHEIGHT))
+
 def toonSpel(spel):
 	game = document.getElementById('game')
 	game.innerHTML = "<table>"
@@ -54,4 +63,5 @@ def toonSpel(spel):
 	game.innerHTML += "</table>"
 	time.sleep(0)
 `
+
 
