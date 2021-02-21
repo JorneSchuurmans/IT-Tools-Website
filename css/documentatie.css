@@ -1,29 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-#lijsten {
+.documentatieTopic {
     margin: 0 10px;
 }
-#lijsten h1, #lijsten h2, #lijsten h3, #lijsten h4, #lijsten h5, #lijsten h6 {
+.documentatieTopic h1, .documentatieTopic h2, .documentatieTopic h3, .documentatieTopic h4, .documentatieTopic h5, .documentatieTopic h6 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
 
     margin: 20px 0;
 }
-#lijsten p {
+.documentatieTopic p {
     font-family: 'Roboto', sans-serif;
 
     margin: 15px 0;
 }
 
-#lijsten hr {
+.documentatieTopic hr {
     margin: 20px 0;
     opacity: 0.25;
 
     border-color: hsl(0, 100%, 98%);
 }
 
-#lijsten #pycode {
+.documentatieTopic #pycode {
     width: auto;
     height: auto;
 
@@ -32,11 +32,11 @@
 
     background-color: hsl(0, 100%, 96%); 
 }
-#lijsten #pycode h3 {
+.documentatieTopic #pycode h3 {
     margin: 0;
 }
 
-#lijsten #code {
+.documentatieTopic #code {
     width: auto;
 
     margin: 0;
@@ -44,10 +44,10 @@
     
     background-color: white;
 }
-#lijsten pre {
+/* .documentatieTopic pre {
     white-space: pre-line;
-}
-#lijsten #codeoutput {
+} */
+.documentatieTopic #codeoutput {
     font-family: monospace;
     width: max-content;
 
@@ -57,3 +57,7 @@
     background-color: hsl(0, 100%, 96%);
 }
 
+.documentatieTopic code {
+    font-size: 16px;
+    background-color: hsl(0, 100%, 96%);
+}
