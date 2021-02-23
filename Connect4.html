@@ -70,19 +70,309 @@
 			</div>
 			<div id="documentatieContent">
 				<div id="variabele" class="documentatieTopic invisible">
+					<h2>Variabelen</h2>
+					
 					<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et velit magna. Mauris rutrum tristique odio id pellentesque. Maecenas eget felis suscipit nisi egestas suscipit eu nec erat. Fusce et vehicula ex, et iaculis quam. Proin nec arcu quis neque facilisis convallis in nec ex. Mauris nec augue at sapien ornare sollicitudin. Maecenas bibendum tempus lorem et luctus. Morbi et feugiat urna. Mauris vulputate eros et massa luctus ultricies. Morbi non tellus augue. Mauris sit amet nisi vel erat cursus cursus a vitae eros. Donec ac odio ut libero bibendum iaculis. Aliquam finibus ultrices elementum.
+						Bij het programmeren wordt veel gebruik gemaakt van variabelen. Een variabele is een naam-waarde combinatie die
+						de computer kan gebruiken. De computer slaat een waarde tijdelijk op ‘in’ een variabele.
+					</p>
+					<p>
+						Denk aan ‘y = 2x’, hierin zijn de x en y variabel. Zodra je een waarde aan
+						x geeft
+						kan je er iets mee, bv x = 2 → y = 2(2) →
+						y = 4. De x is de naam van de variabele en de waarde is (in dit geval) 2. Bij programmeren doe je iets
+						soortgelijks: eerst
+						definieer (declareer) je de variabele en daarna gebruik je hem.
+					</p>
+					<div id="pycode">
+						<h3>Voorbeeld:</h3>
+						<p>Cre&#235;er een Variabele:</p>
+						<div id="code">
+							<pre>
+a = 100
+print(a)</pre>
+							<p id="codeoutput">100</p>
+						</div>
+					</div>
+					<hr>
+					
+					<h2>Herdefini&#235;ren van Variabelen</h2>
+					
+					<p>
+						Variabelen kunnen geherdefinieerd worden
+					</p>
+					
+					<p>
+						Hier gaan we de variabele 'a' gebruiken en deze initialiseren met de waarde '0'
+					</p>
+					<div id="pycode">
+						<h3>Voorbeeld:</h3>
+						<p>Herdefinieer een Variabele:</p>
+						<div id="code">
+							<pre>
+# Declareer een variable en initialiseer het
+a = 0
+print(a)
+
+# Herdefini&#235;ren van de Variabele
+a = "UCLL"
+print(a)</pre>
+							<p id="codeoutput">UCLL</p>
+						</div>
+					</div>
+					<hr>
+					
+					<h2>String Concatenation en Variabelen</h2>
+					
+					<p>
+						Laten we eens kijken of we verschillende gegevenstypen, zoals string en integer kunnen samenvoegen. We zullen
+						bijvoorbeeld "UCLL" samenvoegen met het nummer "100".
+					</p>
+					<div id="pycode">
+						<h3>Voorbeeld:</h3>
+						<p>Voor de volgende code zullen we "undefined output" krijgen!</p>
+						<div id="code">
+							<pre>
+a = "UCLL"
+b = 100
+print(a+b)</pre>
+							<p id="codeoutput">undefined output</p>
+						</div>
+					</div>
+					
+					<p>
+						Waarom? Omdat we variabelen met twee verschillende gegevenstypen (in dit geval een string en integer) proberen samen
+						te voegen. Als de integer gedeclareerd wordt als een string, dan kunnen we de variabele 'a' en 'b' pas samenvoegen.
+					</p>
+					<div id="pycode">
+						<h3>Voorbeeld:</h3>
+						<p>Nu gaan we van de gegevenstype van variabele 'b' omzetten van een integer naar string</p>
+						<div id="code">
+							<pre>
+a = "UCLL"
+b = 100
+print(a+str(b))</pre>
+							<p id="codeoutput">UCLL100</p>
+						</div>
+					</div>
+					<hr>
+					
+					<h2>Variabele types: Lokaal & Globaal</h2>
+					
+					<p>
+						Er zijn twee soorten variabelen in Python: Globale variabele en Lokale variabele. Als je dezelfde variabele voor de
+						rest
+						van je programma of module wilt gebruiken, declareer je deze als een globale variabele, terwijl als je de variabele
+						in
+						een specifieke functie of methode wilt gebruiken, je een lokale variabele gebruikt.
+					</p>
+					
+					<p>
+						1. Laten we een variabele definiëren waarbij de variabele "a" een globaal bereik heeft en de waarde 100 krijgt
+						die wordt afgedrukt in de output
+					</p>
+					<p>
+						2. Variabele a wordt opnieuw gedeclareerd in functie en neemt de lokale scope aan. Het krijgt de waarde "Ik leer
+						Python" die als output wordt afgedrukt. Deze variabele verschilt (lokaal) van de eerder gedefinieerde
+						globale variabele "a" (globaal).
+					</p>
+					<p>
+						3. Zodra de functieaanroep voorbij is, wordt de lokale variabele "a" vernietigd. Als we opnieuw de waarde van
+						"a" afdrukken, wordt de waarde van de globale variabele "a = 100" weergegeven.
+					</p>
+					<div id="pycode">
+						<h3>Voorbeeld:</h3>
+						<p>Declaratie van Lokale en Globale Variabelen</p>
+						<div id="code">
+							<pre>
+# Declareer een variable en initialiseer het
+a = 100
+print(a)
+
+# Globale vs. lokale variabele in functies
+def someFunction():
+# global a
+a = "Ik leer Python"
+print(a)
+someFunction()
+print(a)</pre>
+							<pre id="codeoutput">
+100
+Ik leer Python
+100</pre>							
+						</div>
+					</div>
+					<hr>
+					<p>
+						Omdat je ze steeds moet hergebruiken is het heel handig om de variabele een logische naam te geven. Met logische
+						naamgeving wordt bedoelt dat je de variabele een naam geeft die duidelijk maakt wat erin staat.
+						Logische naamgeving is nodig voor het onderhouden en begrijpelijk maken van je code.
 					</p>
 				</div>
 				<div id="herhalingen" class="documentatieTopic invisible">
 					<p>
-					Fusce efficitur purus a risus sodales, a egestas nisl venenatis. Donec sit amet semper arcu, sed dapibus nisi. Integer dignissim nibh mi, et aliquam purus mollis non. Aenean a lorem ut metus convallis varius vitae id eros. Suspendisse sodales mauris eu turpis blandit tempor. Duis cursus metus nec est pulvinar, eu efficitur metus sagittis. Pellentesque aliquam tincidunt libero, at porttitor metus tempus ac. Quisque sed consequat nisi. Nunc lobortis nisl sit amet hendrerit maximus. Quisque gravida urna vel consectetur posuere. Proin porttitor mauris id nisl aliquet, sit amet fermentum metus ornare. Sed ac purus vestibulum, varius leo vitae, porttitor massa. Phasellus vitae rutrum lectus.
+						Herhaling of iteratie in programmeren betekent dat de uitvoering van bepaalde instructies moet worden herhaald.
+						Daardoor
+						is een lange reeks instructies veel korter en doorgaans gemakkelijker te begrijpen.
+						<br /><br />
+						Bij het gebruik van herhalingen in programmeren let je er op dat sommige instructies dezelfde of erg
+						vergelijkbaar zijn.
+						Daarom wordt er gebruik gemaakt van het computationeel denkproces van patroonherkenning. Soms ontdek je in het
+						herhalende
+						codeblok een herhaling, dat wil zeggen dat de computer de opdrachten één voor één blijft doorlopen terwijl ze
+						worden
+						uitgevoerd.
+						<br /><br />
+						Door herhaling toe te passen kunnen we programma's maken die eenvoudiger kunnen worden gewijzigd, omdat we de
+						herhaalde
+						code slechts één keer hoeven te wijzigen.
 					</p>
 				</div>
 				<div id="keuzes" class="documentatieTopic invisible">
+					<h2>Wat is een If-Else Voorwaarde?</h2>
+					
 					<p>
-					Nullam lobortis ornare fermentum. Sed diam justo, dapibus vitae aliquet ac, tempus a tortor. Mauris tincidunt arcu sed leo mattis imperdiet. Maecenas elit dolor, dignissim quis viverra at, vestibulum sit amet turpis. Curabitur dapibus posuere pellentesque. Ut a egestas eros. Quisque id convallis diam. Praesent varius maximus sem pharetra volutpat. Sed pulvinar accumsan lorem, eu dignissim orci dictum at. Aenean faucibus pulvinar nulla, in mattis sem eleifend a. In fringilla non neque ut cursus. Nam scelerisque accumsan ligula, non dapibus eros dictum hendrerit. Fusce consequat elit sed tortor ultricies, nec euismod nibh ullamcorper. Quisque mattis dignissim tristique.
+						Vrijwel elk algoritme wordt beïnvloed door de keuzes van de gebruiker. Soms kan een keuze van een gebruiker
+						ertoe leiden
+						dat bepaalde delen van een programma wel of niet worden doorlopen. Dit wordt ook wel een selectie genoemd. In
+						plaats van
+						een algoritme stap per stap te doorlopen (= sequentie of opeenvolging), worden enkel de stappen doorlopen
+						waarvoor de
+						gebruiker heeft gekozen.
 					</p>
+					<p>
+						Een selectie bestaat steeds uit een voorwaarde, via de IF-structuur. Deze IF-structuur gaat steeds kijken of
+						er aan
+						een bepaalde voorwaarde wordt voldaan. Bijvoorbeeld: Is de gebruiker oud genoeg? Is het paswoord juist? Moeten
+						er
+						meerdere voorwaarden worden nagekeken?
+					</p>
+					<p>
+						Als je de ene voorwaarde wilt rechtvaardigen terwijl de andere voorwaarde niet waar is, gebruik je de Python If
+						Else structuur.
+					</p>
+					<div id="pycode">
+						<h3>Voorbeeld: If-Else Statement</h3>
+						<p>Het algoritme vraagt de leeftijd van de gebruiker. Als deze leeftijd minder is dan 18, krijgt hij een
+							negatieve
+							boodschap. Anders (dus wanneer hij/zij 18 jaar of meer is) krijgt hij de boodschap dat hij mag autorijden indien
+							hij in
+							het bezit is van een geldig rijbewijs.</p>
+						<div id="code">
+							<pre>
+leeftijd = 18
+
+if (leeftijd &#60; 18):
+   message = "U mag geen auto rijden!""
+
+else:
+   message = "Indien u een rijbewijs heeft mag u auto rijden!""
+
+print(message)</pre>
+							<p id="codeoutput">Indien u een rijbewijs heeft mag u auto rijden!</p>
+						</div>
+					</div>
+					<hr>
+					
+					<h2>De Else-Voorwaarde</h2>
+					
+					<p>
+						De "Else-Voorwaarde" wordt meestal gebruikt als u de ene bewering op een andere moet beoordelen. Als een voorwaarde
+						fout
+						gaat, moet er een andere voorwaarde zijn die de bewering of logica moet rechtvaardigen.
+					</p>
+					<div id="pycode">
+						<h3>Voorbeeld: Else-Voorwaarde</h3>
+						<p>We definiëren twee variabelen x, y = 8, 4.</p>
+						<p>De if-instructie in Python controleert op voorwaarde x &#60; y, wat in dit geval False is</p>
+						<p>De flow van programmabesturing gaat naar de else-voorwaarde</p>
+						<p>De variabele 'message' is ingesteld op "x is groter dan y."</p>
+						<p>De lijn "print(message)" geeft de waarde van variabele message weer die "x is groter dan y" is.</p>
+						<div id="code">
+							<pre>
+x = 8
+y = 4
+													
+if(x &#60; y): 
+   message = "x is kleiner dan y" 
+
+else: 
+   message = "x is groter dan y" 
+
+print (message)</pre>
+							<p id="codeoutput">x is groter dan y</p>
+						</div>
+					</div>
+					<hr>
+					
+					<h2>Wat als de Else-Voorwaarde niet werkt?</h2>
+					
+					<p>
+						Er kunnen veel gevallen zijn waarin uw "else-voorwaarde" niet het gewenste resultaat zal geven. Het zal het
+						verkeerde
+						resultaat afdrukken omdat er een fout is in de programmalogica. In de meeste gevallen gebeurt dit wanneer u meer dan
+						twee beweringen of voorwaarden in een programma moet rechtvaardigen.
+					</p>
+					<div id="pycode">
+						<h3>Voorbeeld: Else-Voorwaarde met 2 dezelfde waardes in de variabelen</h3>
+						<p>
+							Hier zijn beide variabelen hetzelfde (8,8) en is de programma-uitvoer "x is groter dan y", wat FOUT is. Dit komt
+							omdat
+							het de eerste voorwaarde controleert (if-voorwaarde) en als het mislukt, wordt de tweede voorwaarde (else
+							-voorwaarde) standaard afgedrukt. In de volgende stap zullen we zien hoe we deze fout kunnen corrigeren.
+						</p>
+						<div id="code">
+							<pre>
+x = 8
+y = 8
+
+if(x &#60; y): 
+   message = "x is kleiner dan y" 
+
+else: 
+   message = "x is groter dan y" 
+
+print (message)</pre>
+							<p id="codeoutput">x is groter dan y</p>
+						</div>
+					</div>
+					<hr>
+					
+					<h2>Elif-Voorwaarde</h2>
+					
+					<p>
+						Om de vorige fout gemaakt door "else-voorwaarde" te corrigeren, kunnen we de elif-instructie gebruiken. Door de elif
+						-voorwaarde te gebruiken, vertel je het programma om de derde voorwaarde af te drukken wanneer de andere
+						voorwaarde verkeerd of onjuist gaat.
+					</p>
+					<div id="pycode">
+						<h3>Voorbeeld: Elif-Voorwaarde met 2 dezelfde waardes in de variabelen</h3>
+						<p>We definiëren twee variabelen x, y = 8, 8.</p>
+						<p>De if-instructie in Python controleert op voorwaarde x &#60; y, wat in dit geval False is</p>
+						<p>De flow van programmabesturing gaat naar de elif-voorwaarde en controleert of x == y, wat in dit geval TRUE is.
+						</p>
+						<p>De variabele 'message' is ingesteld op "x is gelijk aan y."</p>
+						<p>De lijn "print(message)" geeft de waarde van variabele message weer die "x is gelijk aan y" is.</p>
+						<div id="code">
+							<pre>
+x = 8
+y = 8
+										
+if(x &#60; y): 		
+   message = "x is kleiner dan y" 
+
+elif(x == y):
+
+   message = "x is gelijk aan y"
+		
+else: 	
+   message = "x is groter dan y" 
+										
+print (message)</pre>
+							<p id="codeoutput">x is gelijk aan y</p>
+						</div>
+					</div>
+					<hr>
 				</div>
 				<div id="lijsten" class="documentatieTopic invisible">
 					<h2>List</h2>

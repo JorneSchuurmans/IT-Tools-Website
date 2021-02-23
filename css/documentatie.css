@@ -44,9 +44,11 @@
     
     background-color: white;
 }
+
 /* .documentatieTopic pre {
     white-space: pre-line;
 } */
+
 .documentatieTopic #codeoutput {
     font-family: monospace;
     width: max-content;
