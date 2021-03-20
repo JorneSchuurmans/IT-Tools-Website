@@ -65,7 +65,7 @@
 					<button type="button" onclick="maakZichtbaar('keuzes')">Condities</button>
 					<button type="button" onclick="maakZichtbaar('lijsten')">Lijsten</button>
 					<button type="button" onclick="maakZichtbaar('functies')">Functies</button>
-					<button type="button" onclick="maakZichtbaar('programmaLogica')">ProgrammaLogica</button>
+					<button type="button" onclick="maakZichtbaar('programmaLogica')">Programmalogica</button>
 				</form>
 			</div>
 			<div id="documentatieContent">
@@ -750,7 +750,7 @@ print(mylist)</pre>
 						<div id="code">
 							<pre>
 def my_function():
-	print("Hallo, ik zit in de functie")</pre>
+   print("Hallo, ik zit in de functie")</pre>
 						</div>
 					</div>
 					<hr>
@@ -762,7 +762,7 @@ def my_function():
 						<div id="code">
 							<pre>
 def my_function():
-	print("Hallo, ik zit in de functie.")
+   print("Hallo, ik zit in de functie.")
 
 my_function()</pre>
 							<p id="codeoutput">Hallo, ik zit in de functie</p>
@@ -780,7 +780,7 @@ my_function()</pre>
 						<div id="code">
 							<pre>
 def my_function(voornaam):
-	print(voornaam + " Mostert-Uit de Fles")
+   print(voornaam + " Mostert-Uit de Fles")
 
 my_function("Jan")
 my_function("Piet")
@@ -813,7 +813,7 @@ Joris Mostert-Uit de Fles</pre>
 						<div id="code">
 							<pre>
 def my_function(voornaam, familienaam):
-	print(voornaam + " " + familienaam)
+   print(voornaam + " " + familienaam)
 
 my_function("Jan", "Mostert-Uit de Fles")</pre>
 							<p id="codeoutput">Jan Mostert-Uit de Fles</p>
@@ -828,13 +828,13 @@ my_function("Jan", "Mostert-Uit de Fles")</pre>
 						<div id="code">
 							<pre>
 def my_function(voornaam, familienaam):
-	print(voornaam + " " + familienaam)
+   print(voornaam + " " + familienaam)
 
 my_function("Jan")</pre>
 							<pre id="codeoutput">
 Traceback (most recent call last):
-File "demo.py", line 4, in 	&#60;module	&#62;
-	my_function("Jan")
+File "demo.py", line 4, in &#60;module&#62;
+   my_function("Jan")
 TypeError: my_function() missing 1 required positional argument: 'familienaam'</pre>
 						</div>
 					</div>
@@ -848,7 +848,7 @@ TypeError: my_function() missing 1 required positional argument: 'familienaam'</
 						<div id="code">
 							<pre>
 def my_function(*kids):
-	print("De jongste is " + kids[2])
+   print("De jongste is " + kids[2])
 
 my_function("Jan", "Piet", "Joris")</pre>
 							<p id="codeoutput">De jongste is Joris</p>
@@ -867,7 +867,7 @@ my_function("Jan", "Piet", "Joris")</pre>
 						<div id="code">
 							<pre>
 def my_function(child3, child2, child1):
-	print("De jongste is " + child3)
+   print("De jongste is " + child3)
 
 my_function(child1 = "Jan", child2 = "Piet", child3 = "Joris")</pre>
 							<p id="codeoutput">De jongste is Joris</p>
@@ -885,7 +885,7 @@ my_function(child1 = "Jan", child2 = "Piet", child3 = "Joris")</pre>
 						<div id="code">
 							<pre>
 def my_function(**kid):
-	print("Zijn familienaam	is " + kid["familienaam"])
+   print("Zijn familienaam is " + kid["familienaam"])
 
 my_function(voornaam = "Jan", familienaam = "Mostert-Uit de Fles")</pre>
 							<p id="codeoutput">Zijn familienaam is Mostert-Uit de Fles</p>
@@ -901,7 +901,7 @@ my_function(voornaam = "Jan", familienaam = "Mostert-Uit de Fles")</pre>
 						<div id="code">
 							<pre>
 def my_function(land = "Finland"):
-	print(Ik kom uit + land)
+   print(Ik kom uit + land)
 
 my_function("Zuid-Korea")
 my_function("Noord-Korea")
@@ -925,8 +925,8 @@ Ik kom uit Zimbabwe</pre>
 						<div id="code">
 							<pre>
 def my_function(food):
-	for x in food:
-		print(x)
+   for x in food:
+      print(x)
 
 fruits = ["appel", "banaan", "kers"]
 
@@ -946,7 +946,7 @@ kers</pre>
 						<div id="code">
 							<pre>
 def my_function(x):
-	return 5 * x
+   return 5 * x
 
 print(my_function(3))
 print(my_function(5))
@@ -967,7 +967,7 @@ print(my_function(9))</pre>
 						<div id="code">
 							<pre>
 def my_function():
-	pass</pre>							
+   pass</pre>							
 						</div>
 					</div>
 					<hr>
@@ -990,12 +990,12 @@ def my_function():
 						<div id="code">
 							<pre>
 def tri_recursion(k):
-	if(k > 0):
-		result = k + tri_recursion(k - 1)
-		print(result)
-	else:
-		result = 0
-	return result
+   if(k > 0):
+      result = k + tri_recursion(k - 1)
+      print(result)
+   else:
+      result = 0
+   return result
 
 print("Recursie voorbeeld resultaten")
 tri_recursion(6)</pre>	
@@ -1012,9 +1012,140 @@ Recursie voorbeeld resultaten
 
 				</div>
 				<div id="programmaLogica" class="documentatieTopic invisible">
-					<p>
-					Morbi euismod euismod ligula a porttitor. Phasellus pellentesque quam in tempor ultrices. Donec sit amet sapien eu ante iaculis aliquet nec sed nunc. Ut non felis id massa pellentesque vehicula ac non orci. Nunc vulputate mauris non dictum aliquet. Quisque pretium tortor maximus, finibus eros non, iaculis odio. Suspendisse potenti. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent faucibus, enim vel ultrices dapibus, nibh libero convallis dolor, ac sodales urna erat nec lacus. Fusce efficitur facilisis metus at consectetur. Maecenas justo nibh, ultrices quis mauris vel, varius porta sem.
+					<p>Hier zullen we de programmalogica van Vier Op een Rij bespreken die we met de programmeertaal Python zullen maken.</p>
+					<p>Vier Op een Rij is een spel waarbij twee spelers verschillende bolletjes per beurt in een kolom plaatsen. Je wint door vier van je 
+						kleurbolletjes op een rij te krijgen (horizontaal, verticaal of diagonaal).
 					</p>
+					<p>De programmacode, de logica en zijn Python-integratie naar HTML gaan we niet bespreken omdat het hier niet van toepassing is. Wij geven
+						het skelet al. Het is aan jullie om de logica verder op te bouwen ;)
+					</p>
+
+					<h2>Stap 1: Het plaatsen van een bolletje</h2>
+					<p>Om een bolletje te kunnen plaatsen moeten we eerst een functie hebben die het spel toont, <code>toonSpel(veld)</code>, en die alle velden leeg maakt, 
+						<code>maakLeegVeld()</code>.
+					</p>
+					<p>Het is de bedoeling dat elke speler om de beurt een bolletje in een kolom plaatsen. We maken dus nu de functie <code>plaatsBlokje(kolom, speler)</code>
+						die twee parameters meekrijgt zodat we kunnen bepalen in welke <code>kolom</code> het bolletje moet en welke <code>speler</code> het mag doen.
+					</p>
+					<div id="pycode">
+						<div id="code">
+							<pre>
+def toonSpel(veld):
+   return "dit staat in de javascript voorgeprogrameerd"
+
+def maakLeegVeld():
+   aantalX, aantalY = (7, 6) 
+   array = [[0 for i in range(aantalY)] for j in range(aantalX)] 
+   return array
+
+def plaatsBlokje(kolom, speler):
+   for i in range(6):
+      if veld[kolom][i] == 0:
+         veld[kolom][i] = speler
+         toonSpel(veld)
+         return True
+   return False</pre>
+						</div>
+					</div>
+					<hr>
+
+					<h2>Stap 2: Checken of er een winnaar is</h2>
+					<p>We hebben nu bolletjes kunnen plaatsen, dat is heel fijn natuurlijk, maar hoe bepalen we wie gewonnen heeft?</p>
+					<p>De winnaar is degene die voor snelst 4 bolletjes op een rij krijgt (horizontaal, verticaal of diagonaal).</p>
+					<p>We maken vier functies <code>checkWin()</code>, om de checken of er effectief een winnaar is, <code>checkHorizontaal()</code>, 
+						<code>checkVerticaal()</code> en <code>checkDiagonaal()</code> om in elke riching te checken:
+					</p>
+					<div id="pycode">
+						<div id="code">
+							<pre>
+def checkWin():
+   return checkHorizontaal() or checkVerticaal() or checkDiagonaal()
+
+def checkHorizontaal():
+   for y in range(6):
+   teller = 0
+   for x in range(6):
+      if veld[x][y] != veld[x+1][y] or veld[x][y] == 0: teller = 0
+      else: teller+=1
+      if teller >= 3: return True
+   return False
+
+def checkVerticaal():
+   teller = 0
+   for x in range(7):
+      teller = 0
+      for y in range(5):
+      if veld[x][y] != veld[x][y+1] or veld[x][y] == 0: teller = 0
+      else: teller+=1
+      if teller >= 3: return True
+   return False
+
+def checkDiagonaal():
+   for x in range(4):
+      for y in range(3):
+      teller = 0
+      for i in range(1, 4):
+         if veld[x][y] != veld[x+i][y+i] or veld[x][y] == 0: teller = 0
+         else: teller+=1
+         if teller >= 3: return True
+   
+   for x in range(4):
+      for y in range(3,6):
+      teller = 0
+      for i in range(1, 4):
+         if veld[x][y] != veld[x+i][y-i] or veld[x][y] == 0: teller = 0
+         else: teller+=1
+         if teller >= 3: return True
+   return False</pre>
+						</div>
+					</div>
+					<hr>
+
+					<h2>Stap 3: De hoofd functie</h2>
+					<p>Nu dat we de basis functionaliteit hebben van het spel (om de beurt een bolletje plaatsen, en kijken of er een vier op een rij is), 
+						blijft er nu de <code>main()</code> functie over die alles ordent:
+					</p>
+					<div id="pycode">
+						<div id="code">
+							<pre>
+def main():
+   speler = 0
+   end = False
+
+   while end == False: 
+      if speler != 1: speler = 1
+      else: speler = 2
+      geplaatst = False
+      print("speler "+str(speler)+" is aan de beurt")
+
+      while geplaatst == False:
+         kolom = getMuisKolomNaClick()
+         geplaatst = plaatsBlokje(kolom, speler)
+
+      end = checkWin()
+
+   print("speler "+str(speler)+" wint!")
+   return</pre>
+						</div>
+					</div>
+					<hr>
+
+					<h2>Stap 4: Enjoy!</h2>
+					<p>We hebben nu alle functies gemaakt die crusiaal zijn voor de spel.</p>
+					<p>Om de spel te kunnen spelen, moeten we enkel nog de functies oproepen wanneer ze opgeroepen moeten worden:</p>
+					<div id="pycode">
+						<div id="code">
+							<pre>
+# creeer een spelbord en toon deze op de site
+veld = maakLeegVeld()
+toonSpel(veld)
+
+# roep de main functie op om de spel te spelen
+main()
+pygame.quit()</pre>
+						</div>
+					</div>
+
 				</div>
 			</div>
 		</div>
