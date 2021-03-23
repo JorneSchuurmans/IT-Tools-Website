@@ -17,6 +17,7 @@
 <script src="scripts/commonscripts.js" type="text/javascript"></script>
 <link rel="stylesheet" href="css/TurtleGrapics.css">
 <link rel="shortcut icon" href="images/ucll.ico" type="favicon/ico" />
+<link rel="stylesheet" href="css/documentatie.css">
 <title>Workshop Python</title>
 
 </head> 
@@ -65,32 +66,948 @@
 					<button type="button" onclick="maakZichtbaar('TurtleGrapics')">TurtleGrapics</button>
 				</form>
 			</div>
-			<div id="documentatieContent">
-				<div id="variabele" class="visible">
+			<div id="variabele" class="documentatieTopic invisible">
+				<h2>Variabelen</h2>
+				
+				<p>
+					Bij het programmeren wordt veel gebruik gemaakt van variabelen. Een variabele is een naam-waarde combinatie die
+					de computer kan gebruiken. De computer slaat een waarde tijdelijk op ‘in’ een variabele.
+				</p>
+				<p>
+					Denk aan ‘y = 2x’, hierin zijn de x en y variabel. Zodra je een waarde aan
+					x geeft
+					kan je er iets mee, bv x = 2 → y = 2(2) →
+					y = 4. De x is de naam van de variabele en de waarde is (in dit geval) 2. Bij programmeren doe je iets
+					soortgelijks: eerst
+					definieer (declareer) je de variabele en daarna gebruik je hem.
+				</p>
+				<div id="pycode">
+					<h3>Voorbeeld:</h3>
+					<p>Cre&#235;er een Variabele:</p>
+					<div id="code">
+						<pre>
+a = 100
+print(a)</pre>
+						<p id="codeoutput">100</p>
+					</div>
+				</div>
+				<hr>
+				
+				<h2>Herdefini&#235;ren van Variabelen</h2>
+				
+				<p>
+					Variabelen kunnen geherdefinieerd worden
+				</p>
+				
+				<p>
+					Hier gaan we de variabele 'a' gebruiken en deze initialiseren met de waarde '0'
+				</p>
+				<div id="pycode">
+					<h3>Voorbeeld:</h3>
+					<p>Herdefinieer een Variabele:</p>
+					<div id="code">
+						<pre>
+# Declareer een variable en initialiseer het
+a = 0
+print(a)
+
+# Herdefini&#235;ren van de Variabele
+a = "UCLL"
+print(a)</pre>
+						<p id="codeoutput">UCLL</p>
+					</div>
+				</div>
+				<hr>
+				
+				<h2>String Concatenation en Variabelen</h2>
+				
+				<p>
+					Laten we eens kijken of we verschillende gegevenstypen, zoals string en integer kunnen samenvoegen. We zullen
+					bijvoorbeeld "UCLL" samenvoegen met het nummer "100".
+				</p>
+				<div id="pycode">
+					<h3>Voorbeeld:</h3>
+					<p>Voor de volgende code zullen we "undefined output" krijgen!</p>
+					<div id="code">
+						<pre>
+a = "UCLL"
+b = 100
+print(a+b)</pre>
+						<p id="codeoutput">undefined output</p>
+					</div>
+				</div>
+				
+				<p>
+					Waarom? Omdat we variabelen met twee verschillende gegevenstypen (in dit geval een string en integer) proberen samen
+					te voegen. Als de integer gedeclareerd wordt als een string, dan kunnen we de variabele 'a' en 'b' pas samenvoegen.
+				</p>
+				<div id="pycode">
+					<h3>Voorbeeld:</h3>
+					<p>Nu gaan we van de gegevenstype van variabele 'b' omzetten van een integer naar string</p>
+					<div id="code">
+						<pre>
+a = "UCLL"
+b = 100
+print(a+str(b))</pre>
+						<p id="codeoutput">UCLL100</p>
+					</div>
+				</div>
+				<hr>
+				
+				<h2>Variabele types: Lokaal & Globaal</h2>
+				
+				<p>
+					Er zijn twee soorten variabelen in Python: Globale variabele en Lokale variabele. Als je dezelfde variabele voor de
+					rest
+					van je programma of module wilt gebruiken, declareer je deze als een globale variabele, terwijl als je de variabele
+					in
+					een specifieke functie of methode wilt gebruiken, je een lokale variabele gebruikt.
+				</p>
+				
+				<p>
+					1. Laten we een variabele definiëren waarbij de variabele "a" een globaal bereik heeft en de waarde 100 krijgt
+					die wordt afgedrukt in de output
+				</p>
+				<p>
+					2. Variabele a wordt opnieuw gedeclareerd in functie en neemt de lokale scope aan. Het krijgt de waarde "Ik leer
+					Python" die als output wordt afgedrukt. Deze variabele verschilt (lokaal) van de eerder gedefinieerde
+					globale variabele "a" (globaal).
+				</p>
+				<p>
+					3. Zodra de functieaanroep voorbij is, wordt de lokale variabele "a" vernietigd. Als we opnieuw de waarde van
+					"a" afdrukken, wordt de waarde van de globale variabele "a = 100" weergegeven.
+				</p>
+				<div id="pycode">
+					<h3>Voorbeeld:</h3>
+					<p>Declaratie van Lokale en Globale Variabelen</p>
+					<div id="code">
+						<pre>
+# Declareer een variable en initialiseer het
+a = 100
+print(a)
+
+# Globale vs. lokale variabele in functies
+def someFunction():
+# global a
+a = "Ik leer Python"
+print(a)
+someFunction()
+print(a)</pre>
+						<pre id="codeoutput">
+100
+Ik leer Python
+100</pre>							
+					</div>
+				</div>
+				<hr>
+				<p>
+					Omdat je ze steeds moet hergebruiken is het heel handig om de variabele een logische naam te geven. Met logische
+					naamgeving wordt bedoelt dat je de variabele een naam geeft die duidelijk maakt wat erin staat.
+					Logische naamgeving is nodig voor het onderhouden en begrijpelijk maken van je code.
+				</p>
+			</div>
+			<div id="herhalingen" class="documentatieTopic invisible">
+				<h2>Wat is een herhaling?</h2>
+
+				<p>
+					Herhaling of iteratie in programmeren betekent dat de uitvoering van bepaalde instructies moet worden herhaald.
+					Daardoor
+					is een lange reeks instructies veel korter en doorgaans gemakkelijker te begrijpen.
+				</p>
+				<p>
+					Bij het gebruik van herhalingen in programmeren let je er op dat sommige instructies dezelfde of erg
+					vergelijkbaar zijn.
+					Daarom wordt er gebruik gemaakt van het computationeel denkproces van patroonherkenning. Soms ontdek je in het
+					herhalende
+					codeblok een herhaling, dat wil zeggen dat de computer de opdrachten één voor één blijft doorlopen terwijl ze
+					worden
+					uitgevoerd.
+				</p>
+				<hr>
+
+				<h2>Wat is een while loop?</h2>
+
+				<p>
+					While Loop wordt gebruikt om een ​​codeblok te herhalen. In plaats van het codeblok één keer uit te voeren, voert het
+					het codeblok meerdere keren uit totdat aan een bepaalde voorwaarde is voldaan.
+				</p>
+				<div id="pycode">
+				<h3>Voorbeeld: While Loop</h3>
+				<p>
+					While Loops doet precies hetzelfde als wat een "if statement" doet, maar in plaats van het codeblok één keer uit te voeren,
+					springen ze terug naar het punt waar de code begon en herhalen ze het hele proces opnieuw.
+				</p>
+				<div id="code">
+					<pre>							
+x=0
+
+while(x &#060; 4): 
+print(x)
+x = x+1</pre>
+					<pre id="codeoutput">
+0
+1
+2
+3</pre>
+					</div>
+				</div>
+				<hr>
+				
+				<h2>Wat is een for loop?</h2>
+				
+				<p>
+					De For Loop wordt gebruikt om elementen van een reeks te herhalen. Het wordt vaak gebruikt als u een stuk code heeft dat
+					u een "n" aantal keren wilt herhalen.
+				</p>
+				<div id="pycode">
+					<h3>Voorbeeld: For Loop</h3>
 					<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et velit magna. Mauris rutrum tristique odio id pellentesque. Maecenas eget felis suscipit nisi egestas suscipit eu nec erat. Fusce et vehicula ex, et iaculis quam. Proin nec arcu quis neque facilisis convallis in nec ex. Mauris nec augue at sapien ornare sollicitudin. Maecenas bibendum tempus lorem et luctus. Morbi et feugiat urna. Mauris vulputate eros et massa luctus ultricies. Morbi non tellus augue. Mauris sit amet nisi vel erat cursus cursus a vitae eros. Donec ac odio ut libero bibendum iaculis. Aliquam finibus ultrices elementum.
+						In Python worden "for loops" iterators genoemd.
+						
+						Net als de "while loop", wordt de "for loop" ook gebruikt om het programma te herhalen.
+						
+						Maar in tegenstelling tot de "while loop" die afhankelijk is van de voorwaarde true of false, hangt de "for loop" af van de
+						elementen die het moet herhalen.
+					</p>
+					<div id="code">
+						<pre>
+x=0
+
+while(x &#060; 4): 
+print (x)
+x = x+1 
+
+for x in range(2,7): 
+print(x)</pre>
+						<pre id="codeoutput">
+2
+3
+4
+5
+6</pre>								
+					</div>
+					<p>
+						"for x in range(2,7)""
+					</p>
+					<p>
+						Wanneer deze code wordt uitgevoerd, wordt het nummer tussen 2 en 7 (2,3,4,5,6) afgedrukt. In deze code wordt nummer
+						7
+						niet binnen het bereik beschouwd.
+					</p>
+					<p>
+						For Loops kunnen ook voor een aantal andere dingen worden gebruikt en niet alleen voor nummers. We zullen dit bij de
+						volgende voorbeelden zien.
 					</p>
 				</div>
-				<div id="herhalingen" class="invisible">
+				<hr>
+
+				<h2>Hoe een for loop gebruiken met strings?</h2>
+				
+				<p>
+					In deze stap zullen we zien hoe "for loops" naast getallen ook voor andere dingen kunnen worden gebruikt.
+				</p>
+				<div id="pycode">
+					<h3>Voorbeeld: For Loop met strings</h3>
+					<p></p>
+					<div id="code">
+						<pre>
+Months = ["Jan","Feb","Mar","April","May","June"]
+
+for m in Months:
+print(m)</pre>
+						<pre id="codeoutput">
+Jan
+Feb
+Mar
+April
+May
+June</pre>
+					</div>
 					<p>
-					Fusce efficitur purus a risus sodales, a egestas nisl venenatis. Donec sit amet semper arcu, sed dapibus nisi. Integer dignissim nibh mi, et aliquam purus mollis non. Aenean a lorem ut metus convallis varius vitae id eros. Suspendisse sodales mauris eu turpis blandit tempor. Duis cursus metus nec est pulvinar, eu efficitur metus sagittis. Pellentesque aliquam tincidunt libero, at porttitor metus tempus ac. Quisque sed consequat nisi. Nunc lobortis nisl sit amet hendrerit maximus. Quisque gravida urna vel consectetur posuere. Proin porttitor mauris id nisl aliquet, sit amet fermentum metus ornare. Sed ac purus vestibulum, varius leo vitae, porttitor massa. Phasellus vitae rutrum lectus.
+						Lijn 1: We slaan de maanden ["Jan","Feb","Mar","April","May","June"] op in variabele Months.
+					</p>
+					<p>
+						Lijn 2: We herhalen de For Loop over elke waarde in Months. De huidige waarde van Months is opgeslagen in variabele m.
+					</p>
+					<p>
+						Lijn 3: We printen de maanden.
 					</p>
 				</div>
-				<div id="keuzes" class="invisible">
+				<hr>
+
+				<h2>Hoe break statements gebruiken in For Loops?</h2>
+				
+				<p>
+					Een breakpoint is een unieke functie waarmee u de uitvoering van de For Loop kunt onderbreken of beëindigen.
+				</p>
+				<div id="pycode">
+					<h3>Voorbeeld: Breakpoint in een For Loop</h3>
 					<p>
-					Nullam lobortis ornare fermentum. Sed diam justo, dapibus vitae aliquet ac, tempus a tortor. Mauris tincidunt arcu sed leo mattis imperdiet. Maecenas elit dolor, dignissim quis viverra at, vestibulum sit amet turpis. Curabitur dapibus posuere pellentesque. Ut a egestas eros. Quisque id convallis diam. Praesent varius maximus sem pharetra volutpat. Sed pulvinar accumsan lorem, eu dignissim orci dictum at. Aenean faucibus pulvinar nulla, in mattis sem eleifend a. In fringilla non neque ut cursus. Nam scelerisque accumsan ligula, non dapibus eros dictum hendrerit. Fusce consequat elit sed tortor ultricies, nec euismod nibh ullamcorper. Quisque mattis dignissim tristique.
+						In dit voorbeeld hebben we de nummers 10-20 gedeclareerd, maar we willen dat onze For Loop eindigt op nummer 15 en stopt
+						met verder uitvoeren. Daarvoor declareren we de break-functie door te definiëren (x == 15): break, dus zodra de code het
+						nummer 15 aanroept, wordt het programma beëindigd.
+					</p>
+					<div id="code">
+						<pre>					
+for x in range (10,20):
+if (x == 15): break
+
+if (x % 2 == 0) : continue
+
+print(x)</pre>
+
+						<pre id="codeoutput">
+10
+11
+12
+13
+14</pre>
+					</div>
+					<p>
+						Lijn 1: Declareer de voorwaarde voor breakpoint op x == 15.
+					</p>
+					<p>
+						Lijn 2: Controleert en herhaalt de stappen totdat het nummer 15 bereikt.
+					</p>
+					<p>
+						Lijn 4: We printen het resultaat in de output!
 					</p>
 				</div>
-				<div id="lijsten" class="invisible">
+				<hr>
+
+				<h2>Hoe continue statements gebruiken in For Loops?</h2>
+				
+				<p>
+					Een continue statement, zoals de naam aangeeft, zal de huidige iteratie van de For Loop beëindigen MAAR zal de uitvoering
+					van de resterende iteraties voortzetten.
+				</p>
+				<div id="pycode">
+					<h3>Voorbeeld: Continue in een For Loop</h3>
 					<p>
-					Ut faucibus orci diam, nec pharetra lacus porttitor dignissim. Phasellus mollis aliquet viverra. Morbi vehicula venenatis lacus vitae efficitur. Sed non ligula ornare, venenatis nibh sed, facilisis libero. Nam aliquam maximus nulla in condimentum. Cras vestibulum dui vel enim viverra, sagittis sollicitudin mauris scelerisque. Nullam vestibulum nunc sit amet elit lacinia, quis eleifend velit lobortis. Aliquam sit amet enim ac lectus consequat molestie. Donec massa ante, elementum sed tempor at, condimentum ac sem. Sed felis erat, laoreet et pharetra id, mollis id nulla. Sed tincidunt eros et purus lacinia, ac mattis mauris facilisis. In hac habitasse platea dictumst. Morbi a libero ultrices nibh facilisis bibendum. Pellentesque sed ultrices velit.
+						Een Continue Statement kan worden gebruikt in de For Loop als u een specifieke waarde uit de lijst wilt ophalen.
+					</p>
+					<p>	
+						In ons voorbeeld hebben we de waarde 10-20 gedeclareerd, maar tussen deze getallen willen we alleen die getallen die
+						NIET deelbaar zijn door 5 of met andere woorden die geen nul opleveren wanneer gedeeld door 5.
+					</p>	
+					<p>						
+						Dus behalve nummer 10, 15 & 20 zal de For Loop niet doorgaan en dat nummer niet als uitvoer afdrukken.
+					</p>
+					<div id="code">
+						<pre>								
+for x in range (10,20):
+if (x == 15): break
+
+if (x % 5 == 0) : continue
+
+print(x)</pre>
+				
+						<pre id="codeoutput">
+11
+12
+13
+14
+16
+17
+18
+19</pre>
+					</div>
+					<p>
+						Lijn 1: Declareer de voorwaarde voor breakpoint op x == 15.
+					</p>
+					<p>
+						Lijn 3: Verklaar de voorwaarde voor x gedeeld door 5 = 0 Continue
+					</p>
+					<p>
+						Lijn 4: We printen het resultaat in de output!
 					</p>
 				</div>
-				<div id="functies" class="invisible">
+				<hr>
+
+				<h2>Wat is enumerate() in Phyton?</h2>
+				
+				<p>
+					enumerate () in Phyton is een ingebouwde functie die wordt gebruikt voor het toewijzen van een index aan elk item van
+					het itereerbare object. Het voegt een lus toe aan de itereerbare objecten terwijl het huidige item wordt bijgehouden en
+					retourneert het object in een opsombare vorm. Dit object kan in een For Loop worden gebruikt om het in een lijst te
+					converteren met de methode list ().
+				</p>
+				<div id="pycode">
+					<h3>Voorbeeld: enumerate() functie.</h3>
 					<p>
-					Duis sodales elit ex, nec congue lectus rutrum at. Sed dictum nisl nulla, eu tincidunt lacus eleifend condimentum. Mauris rhoncus et libero congue ultricies. Phasellus faucibus in est non feugiat. Maecenas nec leo laoreet, porttitor lacus sed, fermentum lacus. Nam vulputate et nibh ut condimentum. Nunc lacinia est non ligula ullamcorper rutrum. Aliquam nec eros turpis. Sed eu congue justo. Mauris facilisis nisl purus, quis dapibus nibh feugiat sed. Aenean at mauris at tellus condimentum pellentesque vel sit amet tortor. Proin a est massa. Morbi massa leo, commodo volutpat tempor ac, porta et leo. Morbi vulputate arcu mi, et imperdiet risus tempor eget.
+						enumerate functie wordt gebruikt voor het nummeren of indexeren van de leden in de lijst.													
+					</p>
+					<p>
+						Stel dat we nummering willen doen voor onze maanden; we declareren dan de variabele i die de
+						getallen opsomt, terwijl m het nummer van de maand in de lijst zal afdrukken.
+					</p>						
+					<div id="code">
+						<pre>
+Months = ["Jan","Feb","Mar","April","May","June"]
+
+for i, m in enumerate (Months):
+
+print (i,m)</pre>
+				
+						<pre id="codeoutput">
+0 Jan
+1 Feb
+2 Mar
+3 April
+4 May
+5 June</pre>
+					</div>
+					<p>
+						Lijn 1: Declareert de lijst met maanden.
+					</p>
+					<p>
+						Lijn 2: Declareert variabele i en m voor de For Loop!
+					</p>
+					<p>
+						Lijn 3: We printen het resultaat in de output!
 					</p>
 				</div>
+				<hr>
+
+				<p>
+					Door herhaling toe te passen kunnen we programma's maken die eenvoudiger kunnen worden gewijzigd, omdat we de
+					herhaalde
+					code slechts één keer hoeven te wijzigen.
+				</p>
+			</div>
+			<div id="keuzes" class="documentatieTopic invisible">
+				<h2>Wat is een If-Else Voorwaarde?</h2>
+				
+				<p>
+					Vrijwel elk algoritme wordt beïnvloed door de keuzes van de gebruiker. Soms kan een keuze van een gebruiker
+					ertoe leiden
+					dat bepaalde delen van een programma wel of niet worden doorlopen. Dit wordt ook wel een selectie genoemd. In
+					plaats van
+					een algoritme stap per stap te doorlopen (= sequentie of opeenvolging), worden enkel de stappen doorlopen
+					waarvoor de
+					gebruiker heeft gekozen.
+				</p>
+				<p>
+					Een selectie bestaat steeds uit een voorwaarde, via de IF-structuur. Deze IF-structuur gaat steeds kijken of
+					er aan
+					een bepaalde voorwaarde wordt voldaan. Bijvoorbeeld: Is de gebruiker oud genoeg? Is het paswoord juist? Moeten
+					er
+					meerdere voorwaarden worden nagekeken?
+				</p>
+				<p>
+					Als je de ene voorwaarde wilt rechtvaardigen terwijl de andere voorwaarde niet waar is, gebruik je de Python If
+					Else structuur.
+				</p>
+				<div id="pycode">
+					<h3>Voorbeeld: If-Else Statement</h3>
+					<p>Het algoritme vraagt de leeftijd van de gebruiker. Als deze leeftijd minder is dan 18, krijgt hij een
+						negatieve
+						boodschap. Anders (dus wanneer hij/zij 18 jaar of meer is) krijgt hij de boodschap dat hij mag autorijden indien
+						hij in
+						het bezit is van een geldig rijbewijs.</p>
+					<div id="code">
+						<pre>
+leeftijd = 18
+
+if (leeftijd &#60; 18):
+message = "U mag geen auto rijden!""
+
+else:
+message = "Indien u een rijbewijs heeft mag u auto rijden!""
+
+print(message)</pre>
+						<p id="codeoutput">Indien u een rijbewijs heeft mag u auto rijden!</p>
+					</div>
+				</div>
+				<hr>
+				
+				<h2>De Else-Voorwaarde</h2>
+				
+				<p>
+					De "Else-Voorwaarde" wordt meestal gebruikt als u de ene bewering op een andere moet beoordelen. Als een voorwaarde
+					fout
+					gaat, moet er een andere voorwaarde zijn die de bewering of logica moet rechtvaardigen.
+				</p>
+				<div id="pycode">
+					<h3>Voorbeeld: Else-Voorwaarde</h3>
+					<p>We definiëren twee variabelen x, y = 8, 4.</p>
+					<p>De if-instructie in Python controleert op voorwaarde x &#60; y, wat in dit geval False is</p>
+					<p>De flow van programmabesturing gaat naar de else-voorwaarde</p>
+					<p>De variabele 'message' is ingesteld op "x is groter dan y."</p>
+					<p>De lijn "print(message)" geeft de waarde van variabele message weer die "x is groter dan y" is.</p>
+					<div id="code">
+						<pre>
+x = 8
+y = 4
+												
+if(x &#60; y): 
+message = "x is kleiner dan y" 
+
+else: 
+message = "x is groter dan y" 
+
+print (message)</pre>
+						<p id="codeoutput">x is groter dan y</p>
+					</div>
+				</div>
+				<hr>
+				
+				<h2>Wat als de Else-Voorwaarde niet werkt?</h2>
+				
+				<p>
+					Er kunnen veel gevallen zijn waarin uw "else-voorwaarde" niet het gewenste resultaat zal geven. Het zal het
+					verkeerde
+					resultaat afdrukken omdat er een fout is in de programmalogica. In de meeste gevallen gebeurt dit wanneer u meer dan
+					twee beweringen of voorwaarden in een programma moet rechtvaardigen.
+				</p>
+				<div id="pycode">
+					<h3>Voorbeeld: Else-Voorwaarde met 2 dezelfde waardes in de variabelen</h3>
+					<p>
+						Hier zijn beide variabelen hetzelfde (8,8) en is de programma-uitvoer "x is groter dan y", wat FOUT is. Dit komt
+						omdat
+						het de eerste voorwaarde controleert (if-voorwaarde) en als het mislukt, wordt de tweede voorwaarde (else
+						-voorwaarde) standaard afgedrukt. In de volgende stap zullen we zien hoe we deze fout kunnen corrigeren.
+					</p>
+					<div id="code">
+						<pre>
+x = 8
+y = 8
+
+if(x &#60; y): 
+message = "x is kleiner dan y" 
+
+else: 
+message = "x is groter dan y" 
+
+print (message)</pre>
+						<p id="codeoutput">x is groter dan y</p>
+					</div>
+				</div>
+				<hr>
+				
+				<h2>Elif-Voorwaarde</h2>
+				
+				<p>
+					Om de vorige fout gemaakt door "else-voorwaarde" te corrigeren, kunnen we de elif-instructie gebruiken. Door de elif
+					-voorwaarde te gebruiken, vertel je het programma om de derde voorwaarde af te drukken wanneer de andere
+					voorwaarde verkeerd of onjuist gaat.
+				</p>
+				<div id="pycode">
+					<h3>Voorbeeld: Elif-Voorwaarde met 2 dezelfde waardes in de variabelen</h3>
+					<p>We definiëren twee variabelen x, y = 8, 8.</p>
+					<p>De if-instructie in Python controleert op voorwaarde x &#60; y, wat in dit geval False is</p>
+					<p>De flow van programmabesturing gaat naar de elif-voorwaarde en controleert of x == y, wat in dit geval TRUE is.
+					</p>
+					<p>De variabele 'message' is ingesteld op "x is gelijk aan y."</p>
+					<p>De lijn "print(message)" geeft de waarde van variabele message weer die "x is gelijk aan y" is.</p>
+					<div id="code">
+						<pre>
+x = 8
+y = 8
+									
+if(x &#60; y): 		
+message = "x is kleiner dan y" 
+
+elif(x == y):
+message = "x is gelijk aan y"
+	
+else: 	
+message = "x is groter dan y" 
+									
+print (message)</pre>
+						<p id="codeoutput">x is gelijk aan y</p>
+					</div>
+				</div>
+				<hr>
+			</div>
+			<div id="lijsten" class="documentatieTopic invisible">
+				<h2>List</h2>
+				<p>Lijsten worden gebruikt om meerdere items in één variabele op te slaan.</p>
+				<p>Lijsten zijn een van de 4 ingebouwde gegevenstypen in Python die worden gebruikt om verzamelingen gegevens op te slaan, de andere 3 zijn Tuple, 
+					Set en Dictionary, allemaal met verschillende kwaliteiten en gebruik.</p>
+				<p>Lijsten worden gemaakt met vierkante haken:</p>
+				<div id="pycode">
+					<h3>Voorbeeld:</h3>
+					<p>Cre&#235;er een List:</p>
+					<div id="code">
+						<pre>
+mylist = ["appel", "banaan", "kers"]
+print(mylist)</pre>
+						<p id="codeoutput">['appel', 'banaan', 'kers']</p>
+					</div>
+				</div>
+				<hr>
+
+				<h2>List Items</h2>
+				<p>Lijst items zijn geordend, kunnen worden gewijzigd en staan dubbele waarden toe.</p>
+				<p>Lijst items zijn geïndexeerd, het eerste item heeft index [0], het tweede item heeft index [1], het derde item heeft index [2], enz.</p>
+				<hr>
+
+				<h2>Ordered</h2>
+				<p>Als we zeggen dat lijsten zijn geordend, betekent dit dat de items een gedefinieerde volgorde hebben en dat die volgorde niet verandert.</p>
+				<p>Als je nieuwe items aan een lijst toevoegt, worden de nieuwe items aan het einde van de lijst geplaatst.</p>
+				<hr>
+
+				<h2>Changeable</h2>
+				<p>De lijst kan worden gewijzigd, wat betekent dat we items in een lijst kunnen wijzigen, toevoegen en verwijderen nadat deze is gemaakt.</p>
+				<hr>
+
+				<h2>Allow Duplicates</h2>
+				<p>Aangezien lijsten zijn geïndexeerd, kunnen lijsten items met dezelfde waarde bevatten:</p>
+				<div id="pycode">
+					<h3>Voorbeeld:</h3>
+					<p>Lijsten staan dubbele waarden toe:</p>
+					<div id="code">
+						<pre>
+mylist = ["appel", "banaan", "kers", "appel", "kers"]
+print(mylist)</pre>
+						<p id="codeoutput">['appel', 'banaan', 'kers', 'appel', 'kers']</p>
+					</div>
+				</div>
+				<hr>
+
+				<h2>List Lengte</h2>
+				<p>Gebruik de functie <code>len()</code> om te bepalen hoeveel items een lijst heeft:</p>
+				<div id="pycode">
+					<h3>Voorbeeld:</h3>
+					<p>Print het aantal items in de list:</p>
+					<div id="code">
+						<pre>
+mylist = ["appel", "banaan", "kers"]
+print(len(mylist))</pre>
+						<p id="codeoutput">3</p>
+					</div>
+				</div>
+				<hr>
+
+				<h2>List Items - Data Types</h2>
+				<p>List items kunnen van elk data type zijn:</p>
+				<div id="pycode">
+					<h3>Voorbeeld:</h3>
+					<p>String, int en boolean data types:</p>
+					<div id="code">
+						<pre>
+mylist = ["appel", "banaan", "kers"]
+mylist = [69, 420, 31]
+mylist = [True, True, False]</pre>
+					</div>
+				</div>
+				<p>Een list kan verschillende data types bevatten:</p>
+				<div id="pycode">
+					<h3>Voorbeeld:</h3>
+					<p>List met strings, integers en boolean values:</p>
+					<div id="code">
+						<pre>
+mylist = ["appel", 69, False, 420, "kers"]</pre>
+					</div>
+				</div>
+				<hr>
+
+				<h2>type()</h2>
+				<p>Vanuit het perspectief van Python worden lijsten gedefinieerd als objecten met het data type 'list':</p>
+				<div id="pycode">
+					<code>&#60;class 'list'&#62;</code>
+				</div>
+				<div id="pycode">
+					<h3>Voorbeeld:</h3>
+					<p>What is de data type van een list?</p>
+					<div id="code">
+						<pre>
+mylist = ["appel", 69, False, 420, "kers"]
+print(type(mylist))</pre>
+						<p id="codeoutput">&#60;class 'list'&#62;</p>
+					</div>
+				</div>
+				<hr>
+
+				<h2>De list() constructor</h2>
+				<p>Het is ook mogelijk om de constructor <code style="font-size: 16px;">list()</code> te gebruiken bij het aanmaken van een nieuwe list.</p>
+				<div id="pycode">
+					<h3>Voorbeeld:</h3>
+					<p>Print het aantal items in de list:</p>
+					<div id="code">
+						<pre>
+mylist = list(("appel", "banaan", "kers")) #let op de dubbele ronde haakjes!!
+print(mylist)</pre>
+						<p id="codeoutput">['appel', 'banaan', 'kers']</p>
+					</div>
+				</div>
+				<hr>
+			</div>
+			<div id="functies" class="documentatieTopic invisible">
+				<p>Een functie is een blok code dat alleen wordt uitgevoerd wanneer deze wordt aangeroepen.</p>
+				<p>Je kan gegevens, ook wel parameters genoemd, in een functie doorgeven.</p>
+				<p>Een functie kan gegevens als resultaat retourneren.</p>
+				<hr>
+
+				<h2>Een functie cre&#235;ren</h2>
+				<p>In Python wordt een functie gedefinieerd met het trefwoord <code>def</code>:</p>
+				<div id="pycode">
+					<h3>Voorbeeld:</h3><br>
+					<div id="code">
+						<pre>
+def my_function():
+print("Hallo, ik zit in de functie")</pre>
+					</div>
+				</div>
+				<hr>
+
+				<h2>Een functie aanroepen</h2>
+				<p>Om een functie aan te roepen, gebruik je de functienaam gevolgd door haakjes:</p>
+				<div id="pycode">
+					<h3>Voorbeeld:</h3><br>
+					<div id="code">
+						<pre>
+def my_function():
+print("Hallo, ik zit in de functie.")
+
+my_function()</pre>
+						<p id="codeoutput">Hallo, ik zit in de functie</p>
+					</div>
+				</div>
+				<hr>
+
+				<h2>Argumenten</h2>
+				<p>Informatie kan als argumenten worden doorgegeven in functies.</p>
+				<p>Argumenten worden gespecificeerd tussen haakjes na de functienaam. Je kan zoveel argumenten gescheiden door een komma toevoegen als je wilt.</p>
+				<p>Het volgende voorbeeld heeft een functie met een argument (voornaam). Wanneer de functie wordt aangeroepen, geven we een voornaam door, 
+					die binnen de functie wordt gebruikt om de volledige naam af te drukken:</p>
+				<div id="pycode">
+					<h3>Voorbeeld:</h3><br>
+					<div id="code">
+						<pre>
+def my_function(voornaam):
+print(voornaam + " Mostert-Uit de Fles")
+
+my_function("Jan")
+my_function("Piet")
+my_function("Joris")</pre>
+						<pre id="codeoutput">
+Jan Mostert-Uit de Fles
+Piet Mostert-Uit de Fles
+Joris Mostert-Uit de Fles</pre>
+					</div>
+				</div>
+				<hr>
+
+				<p><i>Argumenten</i> worden in Python-documentatie vaak afgekort tot <i>args</i>.</p>
+				<hr>
+
+				<h2>Parameters of Argumenten?</h2>
+				<p>De termen parameter en argument kunnen voor hetzelfde gebruikt worden: informatie die aan een functie wordt doorgegeven.</p>
+				<br>
+				<p>Vanuit het perspectief van een functie:</p>
+				<p>Een parameter is de variabele die tussen haakjes wordt vermeld in de functiedefinitie.</p>
+				<p>Een argument is de waarde die naar de functie wordt gestuurd wanneer deze wordt aangeroepen.</p>
+				<hr>
+
+				<h2>Aantal argumenten</h2>
+				<p>Standaard moet een functie worden aangeroepen met het juiste aantal argumenten. Dit betekent dat als je functie 2 argumenten verwacht,
+					je de functie met 2 argumenten moet aanroepen, niet meer en niet minder.</p>
+				<div id="pycode">
+					<h3>Voorbeeld:</h3>
+					<p>Hier verwacht de functie 2 argumenten en krijgt 2 argumenten:</p>
+					<div id="code">
+						<pre>
+def my_function(voornaam, familienaam):
+print(voornaam + " " + familienaam)
+
+my_function("Jan", "Mostert-Uit de Fles")</pre>
+						<p id="codeoutput">Jan Mostert-Uit de Fles</p>
+					</div>
+				</div>
+				<hr>
+
+				<p>Als je de functie probeert aan te roepen met 1 of 3 argumenten, krijg je een foutmelding:</p>
+				<div id="pycode">
+					<h3>Voorbeeld:</h3>
+					<p>Hier verwacht de functie 2 argumenten en krijgt er maar 1:</p>
+					<div id="code">
+						<pre>
+def my_function(voornaam, familienaam):
+print(voornaam + " " + familienaam)
+
+my_function("Jan")</pre>
+						<pre id="codeoutput">
+Traceback (most recent call last):
+File "demo.py", line 4, in &#60;module&#62;
+my_function("Jan")
+TypeError: my_function() missing 1 required positional argument: 'familienaam'</pre>
+					</div>
+				</div>
+				<hr>
+
+				<h2>Arbitrary Argumenten, *args</h2>
+				<p>Als je niet weet hoeveel argumenten aan je functie moet doorgeven, voeg je een <code>*</code> toe voor de parameternaam in de functiedefinitie.</p>
+				<div id="pycode">
+					<h3>Voorbeeld:</h3>
+					<p>Als het aantal argumenten onbekend is, voeg je een <code>*</code> toe voor de parameternaam:</p>
+					<div id="code">
+						<pre>
+def my_function(*kids):
+print("De jongste is " + kids[2])
+
+my_function("Jan", "Piet", "Joris")</pre>
+						<p id="codeoutput">De jongste is Joris</p>
+					</div>
+				</div>
+				<hr>
+
+				<p><i>Arbitrary Argumenten</i> worden in Python-documentatie vaak afgekort tot <i>*args</i>.</p>
+				<hr>
+
+				<h2>Trefwoordargumenten</h2>
+				<p>Je kan ook argumenten verzenden met de syntaxis key = value.</p>
+				<p>Op deze manier doet de volgorde van de argumenten er niet toe.</p>
+				<div id="pycode">
+					<h3>Voorbeeld:</h3><br>
+					<div id="code">
+						<pre>
+def my_function(child3, child2, child1):
+print("De jongste is " + child3)
+
+my_function(child1 = "Jan", child2 = "Piet", child3 = "Joris")</pre>
+						<p id="codeoutput">De jongste is Joris</p>
+					</div>
+				</div>
+				<hr>
+
+				<h2>Arbitrary Trefwoordargumenten, **kwargs</h2>
+				<p>Als je niet weet hoeveel trefwoordargumenten je aan je functie moet doorgeven, voeg je twee asterisk toe: <code>**</code> voor de parameternaam 
+					in de functiedefinitie.</p>
+				<p>Op deze manier ontvangt de functie een woordenboek met argumenten en heeft ze dienovereenkomstig toegang tot de items:</p>
+				<div id="pycode">
+					<h3>Voorbeeld:</h3>
+					<p>Als het aantal trefwoordargumenten onbekend is, voeg je een dubbele <code>**</code> toe voor de parameternaam:</p>
+					<div id="code">
+						<pre>
+def my_function(**kid):
+print("Zijn familienaam is " + kid["familienaam"])
+
+my_function(voornaam = "Jan", familienaam = "Mostert-Uit de Fles")</pre>
+						<p id="codeoutput">Zijn familienaam is Mostert-Uit de Fles</p>
+					</div>
+				</div>
+				<hr>
+
+				<h2>Standaard Parameterwaarde</h2>
+				<p>Het volgende voorbeeld laat zien hoe je een standaard parameterwaarde gebruikt.</p>
+				<p>Als we de functie zonder argument aanroepen, gebruikt deze de standaardwaarde:</p>
+				<div id="pycode">
+					<h3>Voorbeeld:</h3><br>
+					<div id="code">
+						<pre>
+def my_function(land = "Finland"):
+print(Ik kom uit + land)
+
+my_function("Zuid-Korea")
+my_function("Noord-Korea")
+my_function()
+my_function("Zimbabwe")</pre>
+						<pre id="codeoutput">
+Ik kom uit Zuid-Korea
+Ik kom uit Noord-Korea
+Ik kom uit Finland
+Ik kom uit Zimbabwe</pre>
+					</div>
+				</div>
+				<hr>
+
+				<h2>Een List doorgeven als Argument</h2>
+				<p>Je kan elk gegevenstype argument naar een functie sturen (string, getal, list, dictionary enz.), en het zal binnen de functie 
+					als hetzelfde gegevenstype worden behandeld.</p>
+				<p>Bv. als je een list als argument verzendt, zal het nog steeds een list zijn wanneer het de functie bereikt:</p>
+				<div id="pycode">
+					<h3>Voorbeeld:</h3><br>
+					<div id="code">
+						<pre>
+def my_function(food):
+for x in food:
+  print(x)
+
+fruits = ["appel", "banaan", "kers"]
+
+my_function(fruits)</pre>
+						<pre id="codeoutput">
+appel
+banaan
+kers</pre>
+					</div>
+				</div>
+				<hr>
+
+				<h2>Returnwaarden</h2>
+				<p>Gebruik de <code>return</code> statement om een functie een waarde te laten returnen:</p>
+				<div id="pycode">
+					<h3>Voorbeeld:</h3><br>
+					<div id="code">
+						<pre>
+def my_function(x):
+return 5 * x
+
+print(my_function(3))
+print(my_function(5))
+print(my_function(9))</pre>
+						<pre id="codeoutput">
+15
+25
+45</pre>
+					</div>
+				</div>
+				<hr>
+
+				<h2>De Pass statement</h2>
+				<p>Functiedefinities mogen niet leeg zijn, maar als je om een of andere reden een functiedefinitie zonder inhoud hebt, voer 
+					dan de <code>pass</code> statement in om te voorkomen dat je een foutmelding krijgt.</p>
+				<div id="pycode">
+					<h3>Voorbeeld:</h3><br>
+					<div id="code">
+						<pre>
+def my_function():
+pass</pre>							
+					</div>
+				</div>
+				<hr>
+
+				<h2>Recursie</h2>
+				<p>Python accepteert ook functie-recursie, wat betekent dat een gedefinieerde functie zichzelf kan aanroepen.</p>
+				<p>Recursie is een algemeen wiskundig en programmeerconcept. Het betekent dat een functie zichzelf aanroept. Dit heeft als voordeel 
+					dat u gegevens kunt doorlopen om een resultaat te bereiken.</p>
+				<p>De ontwikkelaar moet heel voorzichtig zijn met recursie, aangezien het vrij gemakkelijk kan zijn om een functie te schrijven die 
+					nooit stopt, of een functie die overmatige hoeveelheden geheugen of processorkracht gebruikt. Wanneer correct geschreven, kan 
+					recursie echter een zeer efficiënte en wiskundig elegante benadering van programmeren zijn.</p>
+				<p>In dit voorbeeld is <code>tri_recursion()</code> een functie die we hebben gedefinieerd om zichzelf aan te roepen ("recurse"). We gebruiken de 
+					k-variabele als de gegevens, die afnemen (-1) elke keer dat we recursief zijn. De recursie eindigt wanneer de voorwaarde niet 
+					groter is dan 0 (d.w.z. wanneer deze 0 is).</p>
+				<p>Voor een nieuwe ontwikkelaar kan het even duren om erachter te komen hoe dit precies werkt, de beste manier om erachter te komen is door 
+					het te testen en aan te passen.</p>
+				<div id="pycode">
+					<h3>Voorbeeld:</h3>
+					<p>Recursie voorbeeld:</p>
+					<div id="code">
+						<pre>
+def tri_recursion(k):
+if(k > 0):
+  result = k + tri_recursion(k - 1)
+  print(result)
+else:
+  result = 0
+return result
+
+print("Recursie voorbeeld resultaten")
+tri_recursion(6)</pre>	
+					<pre id="codeoutput">
+Recursie voorbeeld resultaten
+1
+3
+6
+10
+15
+21</pre>						
+					</div>
+				</div>
+
+			</div>
 				<div id="TurtleGrapics" class="invisible">
 					<p>
 					Morbi euismod euismod ligula a porttitor. Phasellus pellentesque quam in tempor ultrices. Donec sit amet sapien eu ante iaculis aliquet nec sed nunc. Ut non felis id massa pellentesque vehicula ac non orci. Nunc vulputate mauris non dictum aliquet. Quisque pretium tortor maximus, finibus eros non, iaculis odio. Suspendisse potenti. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent faucibus, enim vel ultrices dapibus, nibh libero convallis dolor, ac sodales urna erat nec lacus. Fusce efficitur facilisis metus at consectetur. Maecenas justo nibh, ultrices quis mauris vel, varius porta sem.
