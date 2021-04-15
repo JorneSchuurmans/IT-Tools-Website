@@ -64,6 +64,7 @@
 					<button type="button" onclick="maakZichtbaar('lijsten')">Lijsten</button>
 					<button type="button" onclick="maakZichtbaar('functies')">Functies</button>
 					<button type="button" onclick="maakZichtbaar('TurtleGrapics')">TurtleGrapics</button>
+					<button type="button" onclick="maakZichtbaar('Voorbeeld')">Voorbeeld</button>
 				</form>
 			</div>
 			<div id="variabele" class="documentatieTopic invisible">
@@ -640,7 +641,7 @@ print(mylist)</pre>
 
 				<h2>List Items</h2>
 				<p>Lijst items zijn geordend, kunnen worden gewijzigd en staan dubbele waarden toe.</p>
-				<p>Lijst items zijn geïndexeerd, het eerste item heeft index [0], het tweede item heeft index [1], het derde item heeft index [2], enz.</p>
+				<p>Lijst items zijn ge&#239;ndexeerd, het eerste item heeft index [0], het tweede item heeft index [1], het derde item heeft index [2], enz.</p>
 				<hr>
 
 				<h2>Ordered</h2>
@@ -653,7 +654,7 @@ print(mylist)</pre>
 				<hr>
 
 				<h2>Allow Duplicates</h2>
-				<p>Aangezien lijsten zijn geïndexeerd, kunnen lijsten items met dezelfde waarde bevatten:</p>
+				<p>Aangezien lijsten zijn ge&#239;ndexeerd, kunnen lijsten items met dezelfde waarde bevatten:</p>
 				<div id="pycode">
 					<h3>Voorbeeld:</h3>
 					<p>Lijsten staan dubbele waarden toe:</p>
@@ -1008,13 +1009,84 @@ Recursie voorbeeld resultaten
 				</div>
 
 			</div>
-				<div id="TurtleGrapics" class="invisible">
+				<div id="TurtleGrapics" class="documentatieTopic invisible">
 					<p>
 					Morbi euismod euismod ligula a porttitor. Phasellus pellentesque quam in tempor ultrices. Donec sit amet sapien eu ante iaculis aliquet nec sed nunc. Ut non felis id massa pellentesque vehicula ac non orci. Nunc vulputate mauris non dictum aliquet. Quisque pretium tortor maximus, finibus eros non, iaculis odio. Suspendisse potenti. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent faucibus, enim vel ultrices dapibus, nibh libero convallis dolor, ac sodales urna erat nec lacus. Fusce efficitur facilisis metus at consectetur. Maecenas justo nibh, ultrices quis mauris vel, varius porta sem.
 					</p>
 				</div>
 			</div>
+		
+		<div id="Voorbeeld" class="documentatieTopic invisible">
+			<div id="pycode">
+				<h3>Voorbeeld:</h3><br>
+				<div id="code">
+					<pre>
+from turtle import *
+import math
+
+color('red', 'red')
+speed(0)
+left(-90)
+#buitensteCirkel
+for i in range(30):
+  begin_fill()
+  x = math.cos(math.radians(i*12))*150
+  y = math.sin(math.radians(i*12))*150
+  goto(x,y)
+  x = math.cos(math.radians(i*12+6))*150
+  y = math.sin(math.radians(i*12+6))*150
+  goto(x,y)
+  goto(0,0)
+  end_fill()
+
+#maakPlaatsVoorCirkel2
+color('white', 'white')
+goto(-50,0)
+begin_fill()
+circle(100)
+end_fill()
+
+goto(0,0)
+color('red', 'red')
+for i in range(30):
+  begin_fill()
+  for j in range(1,3):
+    x1 = math.cos(math.radians(i*12+6*j))*150
+    y1 = math.sin(math.radians(i*12+6*j))*150
+    R=y1/x1
+    if i == 7:
+      if j == 1:
+        x=(100+math.sqrt(40000+30000*R*R))/(2*R*R+2)
+      else:
+        x=(100-math.sqrt(40000+30000*R*R))/(2*R*R+2)
+    elif i == 22:
+      if j == 1:
+        x=(100-math.sqrt(40000+30000*R*R))/(2*R*R+2)
+      else:
+        x=(100+math.sqrt(40000+30000*R*R))/(2*R*R+2)
+    elif i > 14:
+      x=(100-math.sqrt(40000+30000*R*R))/(2*R*R+2)
+    else:
+      x=(100+math.sqrt(40000+30000*R*R))/(2*R*R+2)
+    y=R*x
+    goto(x,y)
+  goto(0,0)
+  end_fill()
+
+goto(-50,0)
+color('white', 'white')
+begin_fill()
+circle(50)
+end_fill()
+done()
+				
+					</pre>
+				</div>
+			</div>
 		</div>
+	</div>
+		</div>
+</div>
 </div>
 
 
