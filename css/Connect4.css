@@ -201,10 +201,11 @@ header nav a{
 }
 
 .invisible{
-	display: none;
-	visibility: hidden;
-	position: absolute;
+	display: none !important;
+	visibility: hidden !important;
+	position: absolute !important;
 }
+
 
 p{
 	font-family: 'roboto', sans-serif;

@@ -167,8 +167,9 @@ header nav a{
 }
 
 .invisible{
-	visibility: hidden;
-	position: absolute;
+	display: none !important;
+	visibility: hidden !important;
+	position: absolute !important;
 }
 
 p{

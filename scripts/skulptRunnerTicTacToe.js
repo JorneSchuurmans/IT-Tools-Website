@@ -30,14 +30,29 @@ function runit() {
        console.log('success');
    },
        function(err) {
-		   err.traceback[0].lineno -= 17;
+		   err.traceback[0].lineno -= 44;
        outf(err.toString());
    });
+} 
+
+function end() { 
+    save('myTicTacToe');
+    window.location.reload(true);
 } 
 
 var preProgrammedGrapics = `
 import document
 import time
+
+import pygame
+from pygame import *
+pygame.quit()
+pygame.init()
+pygame.display.init()
+WINDOWWIDTH = 350
+WINDOWHEIGHT = 350
+pygame.display.set_mode((WINDOWWIDTH, WINDOWHEIGHT))
+
 def toonSpel(spel):
     game = document.getElementById('game')
     game.innerHTML = "<table>"
@@ -52,5 +67,22 @@ def toonSpel(spel):
         game.innerHTML+="</tr>"
     game.innerHTML += "</table>"
     time.sleep(0)
+
+def getMuisPositionNaClick():
+    getal=[]
+    getal = [0 for i in range(2)]
+    while pygame.mouse.get_pressed()[0] == 0:
+        time.sleep(0.1)
+    x = pygame.mouse.get_pos()[0]
+    getal[1] = (x-20)/100
+    y = pygame.mouse.get_pos()[1]
+    getal[0] = (y-20)/100
+    while pygame.mouse.get_pressed()[0] != 0:
+        time.sleep(0.1)
+    if getal[0] < 0: getal[0] = 0
+    if getal[0] > 2: getal[0] = 2
+    if getal[1] < 0: getal[1] = 0
+    if getal[1] > 2: getal[1] = 2
+    return getal
 `
 
