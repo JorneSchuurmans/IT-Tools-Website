@@ -1,3 +1,6 @@
+def toonSpel(veld):
+   return "dit staat in de javascript voorgeprogrameerd"
+
 def maakLeegVeld():
       aantalX, aantalY = (3, 3) 
   array = [[0 for i in range(aantalY)] for j in range(aantalX)] 
