@@ -1010,11 +1010,296 @@ Recursie voorbeeld resultaten
 
 			</div>
 				<div id="TurtleGrapics" class="documentatieTopic invisible">
+					<h2>Introductie</h2>
+					
 					<p>
-					Morbi euismod euismod ligula a porttitor. Phasellus pellentesque quam in tempor ultrices. Donec sit amet sapien eu ante iaculis aliquet nec sed nunc. Ut non felis id massa pellentesque vehicula ac non orci. Nunc vulputate mauris non dictum aliquet. Quisque pretium tortor maximus, finibus eros non, iaculis odio. Suspendisse potenti. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent faucibus, enim vel ultrices dapibus, nibh libero convallis dolor, ac sodales urna erat nec lacus. Fusce efficitur facilisis metus at consectetur. Maecenas justo nibh, ultrices quis mauris vel, varius porta sem.
+						Stel je een robotachtige schildpad voor die begint bij (0, 0) in het x-y-vlak. Geef na een "import turtle" het
+						commando turtle.forward (15), en hij beweegt (op het scherm!) 15 pixels in de richting waarnaar hij kijkt, terwijl hij
+						een lijn trekt terwijl hij beweegt. Geef het het commando turtle.right (25), en het draait op zijn plaats 25 graden met
+						de klok mee.
 					</p>
-				</div>
-			</div>
+					<p>
+						Door deze en soortgelijke opdrachten te combineren, kunnen ingewikkelde vormen en afbeeldingen gemakkelijk worden
+						getekend.
+					</p>
+					<p>
+						De turtle-module is een uitgebreide herimplementatie van de gelijknamige module van de Python-standaarddistributie tot
+						versie Python 2.5.
+						
+						Het probeert de verdiensten van de oude turtle-module te behouden en er (bijna) 100% compatibel mee te zijn. Dit
+						betekent in de eerste plaats dat de lerende programmeur alle commando's, klassen en methoden interactief kan gebruiken
+						bij het gebruik van de module vanuit IDLE uitgevoerd met de -n schakelaar.
+					</p>
+					<p>
+						De turtle-module biedt grafische primitieven voor schildpadden, zowel op objectgeoriënteerde als proceduregeoriënteerde
+						manieren. Omdat het tkinter gebruikt voor de onderliggende grafische afbeeldingen, heeft het een versie van Python nodig
+						die is geïnstalleerd met Tk-ondersteuning.
+					</p>
+					<hr>
+					
+					<h2>Turtle motion</h2>
+					
+					<p>
+						While Loop wordt gebruikt om een codeblok te herhalen. In plaats van het codeblok &#233;&#233;n keer uit te voeren,
+						voert het
+						het codeblok meerdere keren uit totdat aan een bepaalde voorwaarde is voldaan.
+					</p>
+					<div id="pycode">
+						<h3>Voorbeeld: While Loop</h3>
+						<p>
+							While Loops doet precies hetzelfde als wat een "if statement" doet, maar in plaats van het codeblok
+							&#233;&#233;n keer uit te voeren,
+							springen ze terug naar het punt waar de code begon en herhalen ze het hele proces opnieuw.
+						</p>
+						<div id="code">
+							<pre>
+					x=0
+					
+					while(x &#060; 4): 
+					print(x)
+					x = x+1</pre>
+							<pre id="codeoutput">
+					0
+					1
+					2
+					3</pre>
+						</div>
+					</div>
+					<hr>
+					
+					<h2>Wat is een for loop?</h2>
+					
+					<p>
+						De For Loop wordt gebruikt om elementen van een reeks te herhalen. Het wordt vaak gebruikt als u een stuk code heeft
+						dat
+						u een "n" aantal keren wilt herhalen.
+					</p>
+					<div id="pycode">
+						<h3>Voorbeeld: For Loop</h3>
+						<p>
+							In Python worden "for loops" iterators genoemd.
+					
+							Net als de "while loop", wordt de "for loop" ook gebruikt om het programma te herhalen.
+					
+							Maar in tegenstelling tot de "while loop" die afhankelijk is van de voorwaarde true of false, hangt de "for
+							loop" af van de
+							elementen die het moet herhalen.
+						</p>
+						<div id="code">
+							<pre>
+					x=0
+					
+					while(x &#060; 4): 
+					print (x)
+					x = x+1 
+					
+					for x in range(2,7): 
+					print(x)</pre>
+							<pre id="codeoutput">
+					2
+					3
+					4
+					5
+					6</pre>
+						</div>
+						<p>
+							"for x in range(2,7)""
+						</p>
+						<p>
+							Wanneer deze code wordt uitgevoerd, wordt het nummer tussen 2 en 7 (2,3,4,5,6) afgedrukt. In deze code wordt
+							nummer
+							7
+							niet binnen het bereik beschouwd.
+						</p>
+						<p>
+							For Loops kunnen ook voor een aantal andere dingen worden gebruikt en niet alleen voor nummers. We zullen dit
+							bij de
+							volgende voorbeelden zien.
+						</p>
+					</div>
+					<hr>
+					
+					<h2>Hoe een for loop gebruiken met strings?</h2>
+					
+					<p>
+						In deze stap zullen we zien hoe "for loops" naast getallen ook voor andere dingen kunnen worden gebruikt.
+					</p>
+					<div id="pycode">
+						<h3>Voorbeeld: For Loop met strings</h3>
+						<p></p>
+						<div id="code">
+							<pre>
+					Months = ["Jan","Feb","Mar","April","May","June"]
+					
+					for m in Months:
+					print(m)</pre>
+							<pre id="codeoutput">
+					Jan
+					Feb
+					Mar
+					April
+					May
+					June</pre>
+						</div>
+						<p>
+							Lijn 1: We slaan de maanden ["Jan","Feb","Mar","April","May","June"] op in variabele Months.
+						</p>
+						<p>
+							Lijn 2: We herhalen de For Loop over elke waarde in Months. De huidige waarde van Months is opgeslagen in
+							variabele m.
+						</p>
+						<p>
+							Lijn 3: We printen de maanden.
+						</p>
+					</div>
+					<hr>
+					
+					<h2>Hoe break statements gebruiken in For Loops?</h2>
+					
+					<p>
+						Een breakpoint is een unieke functie waarmee u de uitvoering van de For Loop kunt onderbreken of be&#235;indigen.
+					</p>
+					<div id="pycode">
+						<h3>Voorbeeld: Breakpoint in een For Loop</h3>
+						<p>
+							In dit voorbeeld hebben we de nummers 10-20 gedeclareerd, maar we willen dat onze For Loop eindigt op nummer 15
+							en stopt
+							met verder uitvoeren. Daarvoor declareren we de break-functie door te defini&#235;ren (x == 15): break, dus
+							zodra de code het
+							nummer 15 aanroept, wordt het programma be&#235;indigd.
+						</p>
+						<div id="code">
+							<pre>
+					for x in range (10,20):
+					if (x == 15): break
+					
+					if (x % 2 == 0) : continue
+					
+					print(x)</pre>
+					
+							<pre id="codeoutput">
+					10
+					11
+					12
+					13
+					14</pre>
+						</div>
+						<p>
+							Lijn 1: Declareer de voorwaarde voor breakpoint op x == 15.
+						</p>
+						<p>
+							Lijn 2: Controleert en herhaalt de stappen totdat het nummer 15 bereikt.
+						</p>
+						<p>
+							Lijn 4: We printen het resultaat in de output!
+						</p>
+					</div>
+					<hr>
+					
+					<h2>Hoe continue statements gebruiken in For Loops?</h2>
+					
+					<p>
+						Een continue statement, zoals de naam aangeeft, zal de huidige iteratie van de For Loop be&#235;indigen MAAR zal de
+						uitvoering
+						van de resterende iteraties voortzetten.
+					</p>
+					<div id="pycode">
+						<h3>Voorbeeld: Continue in een For Loop</h3>
+						<p>
+							Een Continue Statement kan worden gebruikt in de For Loop als u een specifieke waarde uit de lijst wilt ophalen.
+						</p>
+						<p>
+							In ons voorbeeld hebben we de waarde 10-20 gedeclareerd, maar tussen deze getallen willen we alleen die getallen
+							die
+							NIET deelbaar zijn door 5 of met andere woorden die geen nul opleveren wanneer gedeeld door 5.
+						</p>
+						<p>
+							Dus behalve nummer 10, 15 & 20 zal de For Loop niet doorgaan en dat nummer niet als uitvoer afdrukken.
+						</p>
+						<div id="code">
+							<pre>
+					for x in range (10,20):
+					if (x == 15): break
+					
+					if (x % 5 == 0) : continue
+					
+					print(x)</pre>
+					
+							<pre id="codeoutput">
+					11
+					12
+					13
+					14
+					16
+					17
+					18
+					19</pre>
+						</div>
+						<p>
+							Lijn 1: Declareer de voorwaarde voor breakpoint op x == 15.
+						</p>
+						<p>
+							Lijn 3: Verklaar de voorwaarde voor x gedeeld door 5 = 0 Continue
+						</p>
+						<p>
+							Lijn 4: We printen het resultaat in de output!
+						</p>
+					</div>
+					<hr>
+					
+					<h2>Wat is enumerate() in Phyton?</h2>
+					
+					<p>
+						enumerate () in Phyton is een ingebouwde functie die wordt gebruikt voor het toewijzen van een index aan elk item
+						van
+						het itereerbare object. Het voegt een lus toe aan de itereerbare objecten terwijl het huidige item wordt bijgehouden
+						en
+						retourneert het object in een opsombare vorm. Dit object kan in een For Loop worden gebruikt om het in een lijst te
+						converteren met de methode list ().
+					</p>
+					<div id="pycode">
+						<h3>Voorbeeld: enumerate() functie.</h3>
+						<p>
+							enumerate functie wordt gebruikt voor het nummeren of indexeren van de leden in de lijst.
+						</p>
+						<p>
+							Stel dat we nummering willen doen voor onze maanden; we declareren dan de variabele i die de
+							getallen opsomt, terwijl m het nummer van de maand in de lijst zal afdrukken.
+						</p>
+						<div id="code">
+							<pre>
+					Months = ["Jan","Feb","Mar","April","May","June"]
+					
+					for i, m in enumerate (Months):
+					
+					print (i,m)</pre>
+					
+							<pre id="codeoutput">
+					0 Jan
+					1 Feb
+					2 Mar
+					3 April
+					4 May
+					5 June</pre>
+						</div>
+						<p>
+							Lijn 1: Declareert de lijst met maanden.
+						</p>
+						<p>
+							Lijn 2: Declareert variabele i en m voor de For Loop!
+						</p>
+						<p>
+							Lijn 3: We printen het resultaat in de output!
+						</p>
+					</div>
+					<hr>
+					
+					<p>
+						Door herhaling toe te passen kunnen we programma's maken die eenvoudiger kunnen worden gewijzigd, omdat we de
+						herhaalde
+						code slechts &#233;&#233;n keer hoeven te wijzigen.
+					</p>
+					</div>
 		
 		<div id="Voorbeeld" class="documentatieTopic invisible">
 			<div id="pycode">
