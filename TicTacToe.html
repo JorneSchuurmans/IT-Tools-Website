@@ -1008,11 +1008,114 @@ Recursie voorbeeld resultaten
 					</div>
 	
 				</div>
-				<div id="programmaLogica" class="invisible">
-					<p>
-					Morbi euismod euismod ligula a porttitor. Phasellus pellentesque quam in tempor ultrices. Donec sit amet sapien eu ante iaculis aliquet nec sed nunc. Ut non felis id massa pellentesque vehicula ac non orci. Nunc vulputate mauris non dictum aliquet. Quisque pretium tortor maximus, finibus eros non, iaculis odio. Suspendisse potenti. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent faucibus, enim vel ultrices dapibus, nibh libero convallis dolor, ac sodales urna erat nec lacus. Fusce efficitur facilisis metus at consectetur. Maecenas justo nibh, ultrices quis mauris vel, varius porta sem.
+				<div id="programmaLogica" class="documentatieTopic invisible">
+					<p>Hier zullen we de programmalogica van Tic Tac Toe bespreken die we met de programmeertaal Python zullen maken.</p>
+					<p>Tie Tac Toe is een spel voor twee spelers, dat wordt gespeeld op een vierkant rooster van 3 × 3. Elke speler bezet 
+						om beurten een cel met als doel drie markeringen in een horizontaal, verticaal of diagonaal patroon te plaatsen. 
+						De ene speler gebruikt kruis 'X' als zijn marker, terwijl de andere een nul 'O' gebruikt.
 					</p>
+					<p>De programmacode, de logica en zijn Python-integratie naar HTML gaan we niet bespreken omdat het hier niet van toepassing is. Wij geven
+						het skelet al. Het is aan jullie om de logica verder op te bouwen ;)
+					</p>
+
+					<h2>Stap 1: Het plaatsen van een markering</h2>
+					<p>Om een markering te kunnen plaatsen moeten we eerst een functie hebben die het spel toont, <code>toonSpel(veld)</code>, en die alle velden leeg maakt, 
+						<code>maakLeegVeld()</code>.
+					</p>
+					<p>Het is de bedoeling dat elke speler om de beurt een markering in een kolom plaatst. We maken dus nu de functie <code>plaatsBlokje(rij, kolom, speler)</code>
+						die dire parameters meekrijgt zodat we kunnen bepalen in welke <code>rij</code> en <code>kolom</code> de markering moet en welke <code>speler</code> het mag doen.
+					</p>
+					<div id="pycode">
+						<div id="code">
+							<pre>
+def toonSpel(veld):
+   return "dit staat in de javascript voorgeprogrameerd"
+
+def maakLeegVeld():
+   aantalX, aantalY = (3, 3) 
+   array = [[0 for i in range(aantalY)] for j in range(aantalX)] 
+   return array
+
+def plaatsBlokje(rij, kolom, speler):
+   if veld[kolom][rij] == 0:
+      veld[kolom][rij] = speler
+      toonSpel(veld)
+      return True
+   return False</pre>
+						</div>
+					</div>
+					<hr>
+
+					<h2>Stap 2: Checken of er een winnaar is</h2>
+					<p>We hebben nu markeringen kunnen plaatsen, heel fijn, maar hoe bepalen we wie gewonnen heeft?</p>
+					<p>De winnaar is degene die voor snelst 3 markeringen op een rij krijgt (horizontaal, verticaal of diagonaal).</p>
+					<p>We maken de functie <code>checkWin()</code> om in elke richting te checken of er een winnaar is:
+					</p>
+					<div id="pycode">
+						<div id="code">
+							<pre>
+def checkWin():
+   #horizontaal
+   if veld[0][0] == veld[0][1] == veld[0][2] != 0: return True
+   if veld[1][0] == veld[1][1] == veld[1][2] != 0: return True
+   if veld[2][0] == veld[2][1] == veld[2][2] != 0: return True
+
+   #verticaal
+   if veld[0][0] == veld[1][0] == veld[2][0] != 0: return True
+   if veld[0][1] == veld[1][1] == veld[2][1] != 0: return True
+   if veld[0][2] == veld[1][2] == veld[2][2] != 0: return True
+
+   #diagonaal
+   if veld[0][2] == veld[1][1] == veld[2][0] != 0: return True
+   if veld[0][0] == veld[1][1] == veld[2][2] != 0: return True
+
+   return False</pre>
+						</div>
+					</div>
+					<hr>
+
+					<h2>Stap 3: De hoofd functie</h2>
+					<p>Nu dat we de basis functionaliteit hebben van het spel (om de beurt een bolletje plaatsen, en kijken of er een vier op een rij is), 
+						blijft er nu de <code>main()</code> functie over die alles ordent:
+					</p>
+					<div id="pycode">
+						<div id="code">
+							<pre>
+def main():
+   speler = 0
+   end = False
+   while end == False: 
+      if speler != 1: speler = 1
+      else: speler = 2
+      geplaatst = False
+      print("speler "+str(speler)+" is aan de beurt")
+      while geplaatst == False:
+         pos = getMuisPositionNaClick()
+         geplaatst = plaatsBlokje(pos[0], pos[1], speler)
+      end = checkWin()
+   print("speler " + str(speler) + " wint!")
+   return</pre>
+						</div>
+					</div>
+					<hr>
+
+					<h2>Stap 4: Enjoy!</h2>
+					<p>We hebben nu alle functies gemaakt die crusiaal zijn voor de spel.</p>
+					<p>Om de spel te kunnen spelen, moeten we enkel nog de functies oproepen wanneer ze opgeroepen moeten worden:</p>
+					<div id="pycode">
+						<div id="code">
+							<pre>
+# creeer een spelbord en toon deze op de site
+veld = maakLeegVeld()
+toonSpel(veld)
+
+# roep de main functie op om de spel te spelen
+main()
+pygame.quit()</pre>
+						</div>
+					</div>
 				</div>
+
 			</div>
 		</div>
 </div>
