@@ -88,8 +88,8 @@
 						<p>Cre&#235;er een Variabele:</p>
 						<div id="code">
 							<pre>
-	a = 100
-	print(a)</pre>
+a = 100
+print(a)</pre>
 							<p id="codeoutput">100</p>
 						</div>
 					</div>
@@ -109,13 +109,13 @@
 						<p>Herdefinieer een Variabele:</p>
 						<div id="code">
 							<pre>
-	# Declareer een variable en initialiseer het
-	a = 0
-	print(a)
-	
-	# Herdefini&#235;ren van de Variabele
-	a = "UCLL"
-	print(a)</pre>
+# Declareer een variable en initialiseer het
+a = 0
+print(a)
+
+# Herdefini&#235;ren van de Variabele
+a = "UCLL"
+print(a)</pre>
 							<p id="codeoutput">UCLL</p>
 						</div>
 					</div>
@@ -132,9 +132,9 @@
 						<p>Voor de volgende code zullen we "undefined output" krijgen!</p>
 						<div id="code">
 							<pre>
-	a = "UCLL"
-	b = 100
-	print(a+b)</pre>
+a = "UCLL"
+b = 100
+print(a+b)</pre>
 							<p id="codeoutput">undefined output</p>
 						</div>
 					</div>
@@ -148,9 +148,9 @@
 						<p>Nu gaan we van de gegevenstype van variabele 'b' omzetten van een integer naar string</p>
 						<div id="code">
 							<pre>
-	a = "UCLL"
-	b = 100
-	print(a+str(b))</pre>
+a = "UCLL"
+b = 100
+print(a+str(b))</pre>
 							<p id="codeoutput">UCLL100</p>
 						</div>
 					</div>
@@ -184,21 +184,22 @@
 						<p>Declaratie van Lokale en Globale Variabelen</p>
 						<div id="code">
 							<pre>
-	# Declareer een variable en initialiseer het
-	a = 100
-	print(a)
-	
-	# Globale vs. lokale variabele in functies
-	def someFunction():
-	# global a
-	a = "Ik leer Python"
-	print(a)
-	someFunction()
-	print(a)</pre>
+# Declareer een variable en initialiseer het
+a = 100
+print(a)
+
+# Globale vs. lokale variabele in functies
+def someFunction():
+
+# global a
+a = "Ik leer Python"
+print(a)
+someFunction()
+print(a)</pre>
 							<pre id="codeoutput">
-	100
-	Ik leer Python
-	100</pre>							
+100
+Ik leer Python
+100</pre>							
 						</div>
 					</div>
 					<hr>
@@ -241,16 +242,16 @@
 					</p>
 					<div id="code">
 						<pre>							
-	x=0
-	
-	while(x &#060; 4): 
-	print(x)
-	x = x+1</pre>
+x = 0
+
+while(x &#060; 4): 
+   print(x)
+   x = x+1</pre>
 						<pre id="codeoutput">
-	0
-	1
-	2
-	3</pre>
+0
+1
+2
+3</pre>
 						</div>
 					</div>
 					<hr>
@@ -273,20 +274,20 @@
 						</p>
 						<div id="code">
 							<pre>
-	x=0
-	
-	while(x &#060; 4): 
-	print (x)
-	x = x+1 
-	
-	for x in range(2,7): 
-	print(x)</pre>
+x = 0
+
+while(x &#060; 4): 
+   print (x)
+   x = x+1 
+
+for x in range(2,7): 
+   print(x)</pre>
 							<pre id="codeoutput">
-	2
-	3
-	4
-	5
-	6</pre>								
+2
+3
+4
+5
+6</pre>								
 						</div>
 						<p>
 							"for x in range(2,7)""
@@ -313,17 +314,17 @@
 						<p></p>
 						<div id="code">
 							<pre>
-	Months = ["Jan","Feb","Mar","April","May","June"]
-	
-	for m in Months:
-	print(m)</pre>
+Months = ["Jan","Feb","Mar","April","May","June"]
+
+for m in Months:
+   print(m)</pre>
 							<pre id="codeoutput">
-	Jan
-	Feb
-	Mar
-	April
-	May
-	June</pre>
+Jan
+Feb
+Mar
+April
+May
+June</pre>
 						</div>
 						<p>
 							Lijn 1: We slaan de maanden ["Jan","Feb","Mar","April","May","June"] op in variabele Months.
@@ -351,19 +352,17 @@
 						</p>
 						<div id="code">
 							<pre>					
-	for x in range (10,20):
-	if (x == 15): break
-	
-	if (x % 2 == 0) : continue
-	
-	print(x)</pre>
+for x in range (10,20):
+   if (x == 15): break
+   if (x % 2 == 0) : continue
+   print(x)</pre>
 	
 							<pre id="codeoutput">
-	10
-	11
-	12
-	13
-	14</pre>
+10
+11
+12
+13
+14</pre>
 						</div>
 						<p>
 							Lijn 1: Declareer de voorwaarde voor breakpoint op x == 15.
@@ -397,22 +396,22 @@
 						</p>
 						<div id="code">
 							<pre>								
-	for x in range (10,20):
-	if (x == 15): break
-	
-	if (x % 5 == 0) : continue
-	
-	print(x)</pre>
+for x in range (10,20):
+   if (x == 15): break
+   
+   if (x % 5 == 0) : continue
+   
+   print(x)</pre>
 					
 							<pre id="codeoutput">
-	11
-	12
-	13
-	14
-	16
-	17
-	18
-	19</pre>
+11
+12
+13
+14
+16
+17
+18
+19</pre>
 						</div>
 						<p>
 							Lijn 1: Declareer de voorwaarde voor breakpoint op x == 15.
@@ -445,19 +444,18 @@
 						</p>						
 						<div id="code">
 							<pre>
-	Months = ["Jan","Feb","Mar","April","May","June"]
-	
-	for i, m in enumerate (Months):
-	
-	print (i,m)</pre>
+Months = ["Jan","Feb","Mar","April","May","June"]
+
+for i, m in enumerate (Months):
+   print (i,m)</pre>
 					
 							<pre id="codeoutput">
-	0 Jan
-	1 Feb
-	2 Mar
-	3 April
-	4 May
-	5 June</pre>
+0 Jan
+1 Feb
+2 Mar
+3 April
+4 May
+5 June</pre>
 						</div>
 						<p>
 							Lijn 1: Declareert de lijst met maanden.
@@ -509,15 +507,15 @@
 							het bezit is van een geldig rijbewijs.</p>
 						<div id="code">
 							<pre>
-	leeftijd = 18
-	
-	if (leeftijd &#60; 18):
-	message = "U mag geen auto rijden!""
-	
-	else:
-	message = "Indien u een rijbewijs heeft mag u auto rijden!""
-	
-	print(message)</pre>
+leeftijd = 18
+
+if (leeftijd &#60; 18):
+   message = "U mag geen auto rijden!""
+
+else:
+   message = "Indien u een rijbewijs heeft mag u auto rijden!""
+
+print(message)</pre>
 							<p id="codeoutput">Indien u een rijbewijs heeft mag u auto rijden!</p>
 						</div>
 					</div>
@@ -539,16 +537,16 @@
 						<p>De lijn "print(message)" geeft de waarde van variabele message weer die "x is groter dan y" is.</p>
 						<div id="code">
 							<pre>
-	x = 8
-	y = 4
-													
-	if(x &#60; y): 
-	message = "x is kleiner dan y" 
-	
-	else: 
-	message = "x is groter dan y" 
-	
-	print (message)</pre>
+x = 8
+y = 4
+												
+if(x &#60; y): 
+   message = "x is kleiner dan y" 
+
+else: 
+   message = "x is groter dan y" 
+
+print (message)</pre>
 							<p id="codeoutput">x is groter dan y</p>
 						</div>
 					</div>
@@ -572,16 +570,16 @@
 						</p>
 						<div id="code">
 							<pre>
-	x = 8
-	y = 8
-	
-	if(x &#60; y): 
-	message = "x is kleiner dan y" 
-	
-	else: 
-	message = "x is groter dan y" 
-	
-	print (message)</pre>
+x = 8
+y = 8
+
+if(x &#60; y): 
+   message = "x is kleiner dan y" 
+
+else: 
+   message = "x is groter dan y" 
+
+print (message)</pre>
 							<p id="codeoutput">x is groter dan y</p>
 						</div>
 					</div>
@@ -604,19 +602,19 @@
 						<p>De lijn "print(message)" geeft de waarde van variabele message weer die "x is gelijk aan y" is.</p>
 						<div id="code">
 							<pre>
-	x = 8
-	y = 8
-										
-	if(x &#60; y): 		
-	message = "x is kleiner dan y" 
+x = 8
+y = 8
+									
+if(x &#60; y): 		
+   message = "x is kleiner dan y" 
+
+elif(x == y):
+   message = "x is gelijk aan y"
 	
-	elif(x == y):
-	message = "x is gelijk aan y"
-		
-	else: 	
-	message = "x is groter dan y" 
-										
-	print (message)</pre>
+else: 	
+   message = "x is groter dan y" 
+									
+print (message)</pre>
 							<p id="codeoutput">x is gelijk aan y</p>
 						</div>
 					</div>
@@ -633,8 +631,8 @@
 						<p>Cre&#235;er een List:</p>
 						<div id="code">
 							<pre>
-	mylist = ["appel", "banaan", "kers"]
-	print(mylist)</pre>
+mylist = ["appel", "banaan", "kers"]
+print(mylist)</pre>
 							<p id="codeoutput">['appel', 'banaan', 'kers']</p>
 						</div>
 					</div>
@@ -661,8 +659,8 @@
 						<p>Lijsten staan dubbele waarden toe:</p>
 						<div id="code">
 							<pre>
-	mylist = ["appel", "banaan", "kers", "appel", "kers"]
-	print(mylist)</pre>
+mylist = ["appel", "banaan", "kers", "appel", "kers"]
+print(mylist)</pre>
 							<p id="codeoutput">['appel', 'banaan', 'kers', 'appel', 'kers']</p>
 						</div>
 					</div>
@@ -675,8 +673,8 @@
 						<p>Print het aantal items in de list:</p>
 						<div id="code">
 							<pre>
-	mylist = ["appel", "banaan", "kers"]
-	print(len(mylist))</pre>
+mylist = ["appel", "banaan", "kers"]
+print(len(mylist))</pre>
 							<p id="codeoutput">3</p>
 						</div>
 					</div>
@@ -689,9 +687,9 @@
 						<p>String, int en boolean data types:</p>
 						<div id="code">
 							<pre>
-	mylist = ["appel", "banaan", "kers"]
-	mylist = [69, 420, 31]
-	mylist = [True, True, False]</pre>
+mylist = ["appel", "banaan", "kers"]
+mylist = [69, 420, 31]
+mylist = [True, True, False]</pre>
 						</div>
 					</div>
 					<p>Een list kan verschillende data types bevatten:</p>
@@ -700,7 +698,7 @@
 						<p>List met strings, integers en boolean values:</p>
 						<div id="code">
 							<pre>
-	mylist = ["appel", 69, False, 420, "kers"]</pre>
+mylist = ["appel", 69, False, 420, "kers"]</pre>
 						</div>
 					</div>
 					<hr>
@@ -715,8 +713,8 @@
 						<p>What is de data type van een list?</p>
 						<div id="code">
 							<pre>
-	mylist = ["appel", 69, False, 420, "kers"]
-	print(type(mylist))</pre>
+mylist = ["appel", 69, False, 420, "kers"]
+print(type(mylist))</pre>
 							<p id="codeoutput">&#60;class 'list'&#62;</p>
 						</div>
 					</div>
@@ -729,8 +727,8 @@
 						<p>Print het aantal items in de list:</p>
 						<div id="code">
 							<pre>
-	mylist = list(("appel", "banaan", "kers")) #let op de dubbele ronde haakjes!!
-	print(mylist)</pre>
+mylist = list(("appel", "banaan", "kers")) #let op de dubbele ronde haakjes!!
+print(mylist)</pre>
 							<p id="codeoutput">['appel', 'banaan', 'kers']</p>
 						</div>
 					</div>
@@ -748,8 +746,8 @@
 						<h3>Voorbeeld:</h3><br>
 						<div id="code">
 							<pre>
-	def my_function():
-	print("Hallo, ik zit in de functie")</pre>
+def my_function():
+   print("Hallo, ik zit in de functie")</pre>
 						</div>
 					</div>
 					<hr>
@@ -760,10 +758,10 @@
 						<h3>Voorbeeld:</h3><br>
 						<div id="code">
 							<pre>
-	def my_function():
-	print("Hallo, ik zit in de functie.")
-	
-	my_function()</pre>
+def my_function():
+   print("Hallo, ik zit in de functie.")
+
+my_function()</pre>
 							<p id="codeoutput">Hallo, ik zit in de functie</p>
 						</div>
 					</div>
@@ -778,16 +776,16 @@
 						<h3>Voorbeeld:</h3><br>
 						<div id="code">
 							<pre>
-	def my_function(voornaam):
-	print(voornaam + " Mostert-Uit de Fles")
-	
-	my_function("Jan")
-	my_function("Piet")
-	my_function("Joris")</pre>
+def my_function(voornaam):
+   print(voornaam + " Mostert-Uit de Fles")
+
+my_function("Jan")
+my_function("Piet")
+my_function("Joris")</pre>
 							<pre id="codeoutput">
-	Jan Mostert-Uit de Fles
-	Piet Mostert-Uit de Fles
-	Joris Mostert-Uit de Fles</pre>
+Jan Mostert-Uit de Fles
+Piet Mostert-Uit de Fles
+Joris Mostert-Uit de Fles</pre>
 						</div>
 					</div>
 					<hr>
@@ -811,10 +809,10 @@
 						<p>Hier verwacht de functie 2 argumenten en krijgt 2 argumenten:</p>
 						<div id="code">
 							<pre>
-	def my_function(voornaam, familienaam):
-	print(voornaam + " " + familienaam)
-	
-	my_function("Jan", "Mostert-Uit de Fles")</pre>
+def my_function(voornaam, familienaam):
+   print(voornaam + " " + familienaam)
+
+my_function("Jan", "Mostert-Uit de Fles")</pre>
 							<p id="codeoutput">Jan Mostert-Uit de Fles</p>
 						</div>
 					</div>
@@ -826,15 +824,15 @@
 						<p>Hier verwacht de functie 2 argumenten en krijgt er maar 1:</p>
 						<div id="code">
 							<pre>
-	def my_function(voornaam, familienaam):
-	print(voornaam + " " + familienaam)
-	
-	my_function("Jan")</pre>
+def my_function(voornaam, familienaam):
+   print(voornaam + " " + familienaam)
+
+my_function("Jan")</pre>
 							<pre id="codeoutput">
-	Traceback (most recent call last):
-	File "demo.py", line 4, in &#60;module&#62;
-	my_function("Jan")
-	TypeError: my_function() missing 1 required positional argument: 'familienaam'</pre>
+Traceback (most recent call last):
+File "demo.py", line 4, in &#60;module&#62;
+my_function("Jan")
+TypeError: my_function() missing 1 required positional argument: 'familienaam'</pre>
 						</div>
 					</div>
 					<hr>
@@ -846,10 +844,10 @@
 						<p>Als het aantal argumenten onbekend is, voeg je een <code>*</code> toe voor de parameternaam:</p>
 						<div id="code">
 							<pre>
-	def my_function(*kids):
-	print("De jongste is " + kids[2])
-	
-	my_function("Jan", "Piet", "Joris")</pre>
+def my_function(*kids):
+   print("De jongste is " + kids[2])
+
+my_function("Jan", "Piet", "Joris")</pre>
 							<p id="codeoutput">De jongste is Joris</p>
 						</div>
 					</div>
@@ -865,10 +863,10 @@
 						<h3>Voorbeeld:</h3><br>
 						<div id="code">
 							<pre>
-	def my_function(child3, child2, child1):
-	print("De jongste is " + child3)
-	
-	my_function(child1 = "Jan", child2 = "Piet", child3 = "Joris")</pre>
+def my_function(child3, child2, child1):
+   print("De jongste is " + child3)
+
+my_function(child1 = "Jan", child2 = "Piet", child3 = "Joris")</pre>
 							<p id="codeoutput">De jongste is Joris</p>
 						</div>
 					</div>
@@ -883,10 +881,10 @@
 						<p>Als het aantal trefwoordargumenten onbekend is, voeg je een dubbele <code>**</code> toe voor de parameternaam:</p>
 						<div id="code">
 							<pre>
-	def my_function(**kid):
-	print("Zijn familienaam is " + kid["familienaam"])
-	
-	my_function(voornaam = "Jan", familienaam = "Mostert-Uit de Fles")</pre>
+def my_function(**kid):
+   print("Zijn familienaam is " + kid["familienaam"])
+
+my_function(voornaam = "Jan", familienaam = "Mostert-Uit de Fles")</pre>
 							<p id="codeoutput">Zijn familienaam is Mostert-Uit de Fles</p>
 						</div>
 					</div>
@@ -899,18 +897,18 @@
 						<h3>Voorbeeld:</h3><br>
 						<div id="code">
 							<pre>
-	def my_function(land = "Finland"):
-	print(Ik kom uit + land)
-	
-	my_function("Zuid-Korea")
-	my_function("Noord-Korea")
-	my_function()
-	my_function("Zimbabwe")</pre>
+def my_function(land = "Finland"):
+   print(Ik kom uit + land)
+
+my_function("Zuid-Korea")
+my_function("Noord-Korea")
+my_function()
+my_function("Zimbabwe")</pre>
 							<pre id="codeoutput">
-	Ik kom uit Zuid-Korea
-	Ik kom uit Noord-Korea
-	Ik kom uit Finland
-	Ik kom uit Zimbabwe</pre>
+Ik kom uit Zuid-Korea
+Ik kom uit Noord-Korea
+Ik kom uit Finland
+Ik kom uit Zimbabwe</pre>
 						</div>
 					</div>
 					<hr>
@@ -923,17 +921,17 @@
 						<h3>Voorbeeld:</h3><br>
 						<div id="code">
 							<pre>
-	def my_function(food):
-	for x in food:
-	  print(x)
-	
-	fruits = ["appel", "banaan", "kers"]
-	
-	my_function(fruits)</pre>
+def my_function(food):
+   for x in food:
+      print(x)
+
+fruits = ["appel", "banaan", "kers"]
+
+my_function(fruits)</pre>
 							<pre id="codeoutput">
-	appel
-	banaan
-	kers</pre>
+appel
+banaan
+kers</pre>
 						</div>
 					</div>
 					<hr>
@@ -944,16 +942,16 @@
 						<h3>Voorbeeld:</h3><br>
 						<div id="code">
 							<pre>
-	def my_function(x):
-	return 5 * x
-	
-	print(my_function(3))
-	print(my_function(5))
-	print(my_function(9))</pre>
+def my_function(x):
+   return 5 * x
+
+print(my_function(3))
+print(my_function(5))
+print(my_function(9))</pre>
 							<pre id="codeoutput">
-	15
-	25
-	45</pre>
+15
+25
+45</pre>
 						</div>
 					</div>
 					<hr>
@@ -965,8 +963,8 @@
 						<h3>Voorbeeld:</h3><br>
 						<div id="code">
 							<pre>
-	def my_function():
-	pass</pre>							
+def my_function():
+   pass</pre>							
 						</div>
 					</div>
 					<hr>
@@ -988,24 +986,24 @@
 						<p>Recursie voorbeeld:</p>
 						<div id="code">
 							<pre>
-	def tri_recursion(k):
-	if(k > 0):
-	  result = k + tri_recursion(k - 1)
-	  print(result)
-	else:
-	  result = 0
-	return result
-	
-	print("Recursie voorbeeld resultaten")
-	tri_recursion(6)</pre>	
+def tri_recursion(k):
+   if(k > 0):
+   result = k + tri_recursion(k - 1)
+   	print(result)
+   else:
+   	result = 0
+   return result
+
+print("Recursie voorbeeld resultaten")
+tri_recursion(6)</pre>	
 						<pre id="codeoutput">
-	Recursie voorbeeld resultaten
-	1
-	3
-	6
-	10
-	15
-	21</pre>						
+Recursie voorbeeld resultaten
+1
+3
+6
+10
+15
+21</pre>						
 						</div>
 					</div>
 	
