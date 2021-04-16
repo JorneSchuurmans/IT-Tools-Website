@@ -1035,272 +1035,507 @@ Recursie voorbeeld resultaten
 						manieren. Omdat het tkinter gebruikt voor de onderliggende grafische afbeeldingen, heeft het een versie van Python nodig
 						die is geïnstalleerd met Tk-ondersteuning.
 					</p>
+					<p>
+						De documentatie hieronder kunt u op deze link terug vinden: 
+						https://docs.python.org/3/library/turtle.html
+					</p>
 					<hr>
 					
 					<h2>Turtle motion</h2>
 					
 					<p>
-						While Loop wordt gebruikt om een codeblok te herhalen. In plaats van het codeblok &#233;&#233;n keer uit te voeren,
-						voert het
-						het codeblok meerdere keren uit totdat aan een bepaalde voorwaarde is voldaan.
+						Methoden van RawTurtle / Turtle en bijbehorende functies
 					</p>
 					<div id="pycode">
-						<h3>Voorbeeld: While Loop</h3>
+						<h3>Turtle forward</h3>
 						<p>
-							While Loops doet precies hetzelfde als wat een "if statement" doet, maar in plaats van het codeblok
-							&#233;&#233;n keer uit te voeren,
-							springen ze terug naar het punt waar de code begon en herhalen ze het hele proces opnieuw.
+							Verplaats de schildpad met de opgegeven afstand naar voren, in de richting waarin de schildpad op weg is.
 						</p>
 						<div id="code">
 							<pre>
-					x=0
-					
-					while(x &#060; 4): 
-					print(x)
-					x = x+1</pre>
+turtle.position()
+turtle.forward(25)
+
+turtle.position()
+turtle.forward(-75)
+
+turtle.position()</pre>
 							<pre id="codeoutput">
-					0
-					1
-					2
-					3</pre>
+(0.00,0.00)
+(25.00,0.00)
+(-50.00,0.00)</pre>
 						</div>
 					</div>
+					
 					<hr>
-					
-					<h2>Wat is een for loop?</h2>
-					
-					<p>
-						De For Loop wordt gebruikt om elementen van een reeks te herhalen. Het wordt vaak gebruikt als u een stuk code heeft
-						dat
-						u een "n" aantal keren wilt herhalen.
-					</p>
+
 					<div id="pycode">
-						<h3>Voorbeeld: For Loop</h3>
+						<h3>Turtle backward</h3>
 						<p>
-							In Python worden "for loops" iterators genoemd.
-					
-							Net als de "while loop", wordt de "for loop" ook gebruikt om het programma te herhalen.
-					
-							Maar in tegenstelling tot de "while loop" die afhankelijk is van de voorwaarde true of false, hangt de "for
-							loop" af van de
-							elementen die het moet herhalen.
+							Verplaats de schildpad op afstand achteruit, tegengesteld aan de richting waarin de schildpad op weg is. Verander de
+							koers van de schildpad niet.						
 						</p>
 						<div id="code">
 							<pre>
-					x=0
-					
-					while(x &#060; 4): 
-					print (x)
-					x = x+1 
-					
-					for x in range(2,7): 
-					print(x)</pre>
+turtle.position()
+turtle.backward(30)
+
+turtle.position()</pre>
 							<pre id="codeoutput">
-					2
-					3
-					4
-					5
-					6</pre>
+(0.00,0.00)
+(-30.00,0.00)</pre>
 						</div>
-						<p>
-							"for x in range(2,7)""
-						</p>
-						<p>
-							Wanneer deze code wordt uitgevoerd, wordt het nummer tussen 2 en 7 (2,3,4,5,6) afgedrukt. In deze code wordt
-							nummer
-							7
-							niet binnen het bereik beschouwd.
-						</p>
-						<p>
-							For Loops kunnen ook voor een aantal andere dingen worden gebruikt en niet alleen voor nummers. We zullen dit
-							bij de
-							volgende voorbeelden zien.
-						</p>
 					</div>
+
 					<hr>
+
 					
-					<h2>Hoe een for loop gebruiken met strings?</h2>
-					
-					<p>
-						In deze stap zullen we zien hoe "for loops" naast getallen ook voor andere dingen kunnen worden gebruikt.
-					</p>
 					<div id="pycode">
-						<h3>Voorbeeld: For Loop met strings</h3>
-						<p></p>
-						<div id="code">
-							<pre>
-					Months = ["Jan","Feb","Mar","April","May","June"]
-					
-					for m in Months:
-					print(m)</pre>
-							<pre id="codeoutput">
-					Jan
-					Feb
-					Mar
-					April
-					May
-					June</pre>
-						</div>
+						<h3>Turtle right</h3>
 						<p>
-							Lijn 1: We slaan de maanden ["Jan","Feb","Mar","April","May","June"] op in variabele Months.
-						</p>
-						<p>
-							Lijn 2: We herhalen de For Loop over elke waarde in Months. De huidige waarde van Months is opgeslagen in
-							variabele m.
-						</p>
-						<p>
-							Lijn 3: We printen de maanden.
-						</p>
-					</div>
-					<hr>
-					
-					<h2>Hoe break statements gebruiken in For Loops?</h2>
-					
-					<p>
-						Een breakpoint is een unieke functie waarmee u de uitvoering van de For Loop kunt onderbreken of be&#235;indigen.
-					</p>
-					<div id="pycode">
-						<h3>Voorbeeld: Breakpoint in een For Loop</h3>
-						<p>
-							In dit voorbeeld hebben we de nummers 10-20 gedeclareerd, maar we willen dat onze For Loop eindigt op nummer 15
-							en stopt
-							met verder uitvoeren. Daarvoor declareren we de break-functie door te defini&#235;ren (x == 15): break, dus
-							zodra de code het
-							nummer 15 aanroept, wordt het programma be&#235;indigd.
+							Draai de schildpad naar rechts door middel van hoekeenheden. (Eenheden zijn standaard graden, maar kunnen worden
+							ingesteld via de functies graden () en radialen ().) Hoekoriëntatie hangt af van de schildpadmodus.
 						</p>
 						<div id="code">
 							<pre>
-					for x in range (10,20):
-					if (x == 15): break
-					
-					if (x % 2 == 0) : continue
-					
-					print(x)</pre>
-					
+turtle.heading()
+turtle.right(45)
+
+turtle.heading()
+</pre>
 							<pre id="codeoutput">
-					10
-					11
-					12
-					13
-					14</pre>
+22.0
+337.0</pre>
 						</div>
-						<p>
-							Lijn 1: Declareer de voorwaarde voor breakpoint op x == 15.
-						</p>
-						<p>
-							Lijn 2: Controleert en herhaalt de stappen totdat het nummer 15 bereikt.
-						</p>
-						<p>
-							Lijn 4: We printen het resultaat in de output!
-						</p>
 					</div>
+
 					<hr>
-					
-					<h2>Hoe continue statements gebruiken in For Loops?</h2>
-					
-					<p>
-						Een continue statement, zoals de naam aangeeft, zal de huidige iteratie van de For Loop be&#235;indigen MAAR zal de
-						uitvoering
-						van de resterende iteraties voortzetten.
-					</p>
+
 					<div id="pycode">
-						<h3>Voorbeeld: Continue in een For Loop</h3>
+						<h3>Turtle left</h3>
 						<p>
-							Een Continue Statement kan worden gebruikt in de For Loop als u een specifieke waarde uit de lijst wilt ophalen.
-						</p>
-						<p>
-							In ons voorbeeld hebben we de waarde 10-20 gedeclareerd, maar tussen deze getallen willen we alleen die getallen
-							die
-							NIET deelbaar zijn door 5 of met andere woorden die geen nul opleveren wanneer gedeeld door 5.
-						</p>
-						<p>
-							Dus behalve nummer 10, 15 & 20 zal de For Loop niet doorgaan en dat nummer niet als uitvoer afdrukken.
+							Draai de schildpad naar links door middel van hoekeenheden. (Eenheden zijn standaard graden, maar kunnen worden
+							ingesteld via de functies graden () en radialen ().) Hoekoriëntatie hangt af van de schildpadmodus.
 						</p>
 						<div id="code">
 							<pre>
-					for x in range (10,20):
-					if (x == 15): break
-					
-					if (x % 5 == 0) : continue
-					
-					print(x)</pre>
-					
+turtle.heading()
+turtle.left(45)
+
+turtle.heading()</pre>
 							<pre id="codeoutput">
-					11
-					12
-					13
-					14
-					16
-					17
-					18
-					19</pre>
+22.0
+67.0</pre>
 						</div>
-						<p>
-							Lijn 1: Declareer de voorwaarde voor breakpoint op x == 15.
-						</p>
-						<p>
-							Lijn 3: Verklaar de voorwaarde voor x gedeeld door 5 = 0 Continue
-						</p>
-						<p>
-							Lijn 4: We printen het resultaat in de output!
-						</p>
 					</div>
+
 					<hr>
 					
-					<h2>Wat is enumerate() in Phyton?</h2>
-					
-					<p>
-						enumerate () in Phyton is een ingebouwde functie die wordt gebruikt voor het toewijzen van een index aan elk item
-						van
-						het itereerbare object. Het voegt een lus toe aan de itereerbare objecten terwijl het huidige item wordt bijgehouden
-						en
-						retourneert het object in een opsombare vorm. Dit object kan in een For Loop worden gebruikt om het in een lijst te
-						converteren met de methode list ().
-					</p>
 					<div id="pycode">
-						<h3>Voorbeeld: enumerate() functie.</h3>
+						<h3>Turtle positioning</h3>
 						<p>
-							enumerate functie wordt gebruikt voor het nummeren of indexeren van de leden in de lijst.
-						</p>
-						<p>
-							Stel dat we nummering willen doen voor onze maanden; we declareren dan de variabele i die de
-							getallen opsomt, terwijl m het nummer van de maand in de lijst zal afdrukken.
+							Verplaats de schildpad naar een absolute positie. Als de pen naar beneden is, trek dan een lijn. Verander de oriëntatie
+							van de schildpad niet.
 						</p>
 						<div id="code">
 							<pre>
-					Months = ["Jan","Feb","Mar","April","May","June"]
-					
-					for i, m in enumerate (Months):
-					
-					print (i,m)</pre>
-					
+tp = turtle.pos()
+tp
+
+turtle.setpos(60,30)
+turtle.pos()
+
+turtle.setpos(20,80)
+turtle.pos()
+
+turtle.setpos(tp)
+turtle.pos()
+
+</pre>
 							<pre id="codeoutput">
-					0 Jan
-					1 Feb
-					2 Mar
-					3 April
-					4 May
-					5 June</pre>
+(0.00,0.00)
+(60.00,30.00)
+(20.00,80.00)
+(0.00,0.00)</pre>
 						</div>
-						<p>
-							Lijn 1: Declareert de lijst met maanden.
-						</p>
-						<p>
-							Lijn 2: Declareert variabele i en m voor de For Loop!
-						</p>
-						<p>
-							Lijn 3: We printen het resultaat in de output!
-						</p>
 					</div>
+
 					<hr>
+
+					<div id="pycode">
+						<h3>Turtle circle</h3>
+						<p>
+							Teken een cirkel met een opgegeven straal. Het midden is straaleenheden links van de schildpad; omvang - een hoek -
+							bepaalt welk deel van de cirkel wordt getekend. Als de omvang niet is opgegeven, tekent u de hele cirkel. Als de omvang
+							geen volledige cirkel is, is één eindpunt van de boog de huidige penpositie. Teken de boog tegen de klok in als de
+							straal positief is, anders met de klok mee. Ten slotte wordt de richting van de schildpad veranderd door de mate van
+							omvang.
+						</p>
+						<div id="code">
+							<pre>
+turtle.home()
+
+turtle.position()
+turtle.heading()
+
+turtle.circle(50)
+turtle.position()
+turtle.heading()
+
+turtle.circle(120, 180)
+turtle.position()
+turtle.heading()</pre>
+							<pre id="codeoutput">
+(0.00,0.00)
+ 0.0
+(-0.00,0.00)
+ 0.0
+(0.00,240.00)
+ 180.0</pre>
+						</div>
+					</div>
+
+					<hr>
+
+					<div id="pycode">
+						<h3>Turtle dot</h3>
+						<p>
+							Teken een ronde stip met diametergrootte en gebruik kleur. Als de maat niet wordt vermeld, wordt het maximum van penmaat
+							+ 4 en 2 * penmaat gebruikt.
+						</p>
+						<div id="code">
+							<pre>
+turtle.home()
+turtle.dot()
+turtle.fd(50); turtle.dot(20, "blue"); turtle.fd(50)
+
+turtle.position()
+turtle.heading()</pre>
+							<pre id="codeoutput">
+(100.00,-0.00)
+ 0.0</pre>
+						</div>
+					</div>
+
+					<hr>
+
+					<h2>Turtle state</h2>
 					
 					<p>
-						Door herhaling toe te passen kunnen we programma's maken die eenvoudiger kunnen worden gewijzigd, omdat we de
-						herhaalde
-						code slechts &#233;&#233;n keer hoeven te wijzigen.
+						Status van RawTurtle / Turtle en bijbehorende functies.
 					</p>
+
+					<div id="pycode">
+						<h3>Turtle position</h3>
+						<p>
+							Retourneer de huidige locatie van de schildpad (x, y)
+						</p>
+						<div id="code">
+							<pre>
+turtle.pos()</pre>
+							<pre id="codeoutput">
+(440.00,-0.00)</pre>
+						</div>
 					</div>
-		
+
+					<hr>
+
+					<div id="pycode">
+						<h3>Turtle x cord</h3>
+						<p>
+							Retourneert de x locatie van de schildpad
+						</p>
+						<div id="code">
+							<pre>
+turtle.home()
+turtle.left(50)
+turtle.forward(100)
+
+turtle.pos()
+print(round(turtle.xcor(), 5))
+</pre>
+							<pre id="codeoutput">
+(64.28,76.60)
+ 64.27876</pre>
+						</div>
+					</div>
+
+					<hr>
+
+					<div id="pycode">
+						<h3>Turtle y cord</h3>
+						<p>
+							Retourneert de y locatie van de schildpad
+						</p>
+						<div id="code">
+							<pre>
+turtle.home()
+turtle.left(60)
+turtle.forward(100)
+
+turtle.pos()
+print(round(turtle.ycor(), 5))</pre>
+							<pre id="codeoutput">
+(50.00,86.60)
+ 86.260254</pre>
+						</div>
+					</div>
+
+					<hr>
+
+					<h2>Pen control</h2>
+					
+					<p>
+						Teken status van Turtle.
+					</p>
+
+					<div id="pycode">
+						<h3>Turtle pen</h3>
+						<p>
+							Retourneer of stel de kenmerken van de pen in een "pen-woordenboek" in met de volgende sleutel / waarde-paren:
+						</p>
+						<p>
+							Dit woordenboek kan worden gebruikt als argument voor een volgende aanroep van pen () om de vroegere pen-status te
+							herstellen. Bovendien kunnen een of meer van deze attributen worden opgegeven als trefwoord-argumenten. Dit kan worden
+							gebruikt om meerdere penattributen in één instructie in te stellen.
+						</p>
+						<div id="code">
+							<pre>
+turtle.pen(fillcolor="black", pencolor="red", pensize=10)
+sorted(turtle.pen().items())
+[('fillcolor', 'black'), ('outline', 1), ('pencolor', 'red'),
+('pendown', True), ('pensize', 10), ('resizemode', 'noresize'),
+('shearfactor', 0.0), ('shown', True), ('speed', 9),
+('stretchfactor', (1.0, 1.0)), ('tilt', 0.0)]
+penstate=turtle.pen()
+turtle.color("yellow", "")
+turtle.penup()
+sorted(turtle.pen().items())[:3]
+[('fillcolor', ''), ('outline', 1), ('pencolor', 'yellow')]
+turtle.pen(penstate, fillcolor="green")
+sorted(turtle.pen().items())[:3]
+[('fillcolor', 'green'), ('outline', 1), ('pencolor', 'red')]</pre>
+
+						</div>
+					</div>
+
+					<hr>
+
+					<h2>Color control</h2>
+								
+					<div id="pycode">
+						<h3>Turtle pencolor</h3>
+						<p>
+							Retourneer of stel de penkleur in.
+						</p>
+						<div id="code">
+							<pre>
+colormode()
+
+turtle.pencolor()
+turtle.pencolor("brown")
+turtle.pencolor()
+
+tup = (0.2, 0.8, 0.55)
+turtle.pencolor(tup)
+turtle.pencolor()
+
+colormode(255)
+
+turtle.pencolor()
+turtle.pencolor('#32c18f')
+turtle.pencolor()</pre>
+							<pre id="codeoutput">
+1.0
+'red'
+'brown'
+(0.2, 0.8, 0.5490196078431373)
+(51.0, 204.0, 140.0)
+(50.0, 193.0, 143.0)</pre>
+						</div>
+					</div>
+
+					<hr>
+
+					<div id="pycode">
+					<h3>Turtle fillcolor</h3>
+						<p>
+							Retourneer of stel de vulkleur in.
+						</p>
+						<div id="code">
+							<pre>
+turtle.fillcolor("violet")
+turtle.fillcolor()
+
+turtle.pencolor()
+
+turtle.fillcolor((50, 193, 143))
+turtle.fillcolor()
+
+turtle.fillcolor('#ffffff')
+turtle.fillcolor()
+</pre>
+							<pre id="codeoutput">
+'violet'
+(50.0, 193.0, 143.0)
+(50.0, 193.0, 143.0)
+(255.0, 255.0, 255.0)</pre>
+						</div>
+					</div>
+
+					<hr>
+
+				<div id="pycode">
+					<h3>Turtle color</h3>
+						<p>
+							Retourneer of stel de penkleur en vulkleur in.
+						</p>
+						<div id="code">
+							<pre>
+turtle.color("red", "green")
+turtle.color()
+
+color("#285078", "#a0c8f0")
+color()</pre>
+							<pre id="codeoutput">
+('red', 'green')
+((40.0, 80.0, 120.0), (160.0, 200.0, 240.0))</pre>
+						</div>
+					</div>
+
+					<hr>
+
+				<h2>More drawing control</h2>
+
+				<div id="pycode">
+					<h3>Turtle reset</h3>
+						<p>
+							Verwijder de tekeningen van de schildpad van het scherm, centreer de schildpad opnieuw en stel variabelen in op de
+							standaardwaarden.
+						</p>
+						<div id="code">
+							<pre>
+turtle.goto(0,-22)
+turtle.left(100)
+turtle.position()
+
+turtle.heading()
+
+turtle.reset()
+turtle.position()
+
+turtle.heading()</pre>
+							<pre id="codeoutput">
+((0.00,-22.00)
+100.0
+(0.00,0.00)
+0.0</pre>
+						</div>
+					</div>
+
+					<hr>
+
+				<div id="pycode">
+					<h3>Turtle write</h3>
+						<p>
+							Verwijder de tekeningen van de schildpad van het scherm. Verplaats de schildpad niet. Staat en positie van de schildpad,
+							evenals tekeningen van andere schildpadden, worden niet beïnvloed.
+						</p>
+						<div id="code">
+							<pre>
+turtle.write("Home = ", True, align="center")
+turtle.write((0,0), True)</pre>
+
+						</div>
+					</div>
+
+					<hr>
+
+					<h2>Appearance</h2>
+
+				<div id="pycode">
+					<h3>Turtle shape</h3>
+						<p>
+							Stel de vorm van de schildpad in op de vorm met de opgegeven naam of, als er geen naam wordt gegeven, retourneer de naam
+							van de huidige vorm. Vorm met naam moet voorkomen in het vormwoordenboek van TurtleScreen. In eerste instantie zijn er
+							de volgende polygoonvormen: "pijl", "schildpad", "cirkel", "vierkant", "driehoek", "klassiek".
+						</p>
+						<div id="code">
+							<pre>
+turtle.shape()
+
+turtle.shape("turtle")
+turtle.shape()</pre>
+							<pre id="codeoutput">
+'classic'
+100.0
+'turtle'</pre>
+						</div>
+					</div>
+
+					<hr>
+
+				<div id="pycode">
+					<h3>Turtle size</h3>
+						<p>
+							Retourneer of stel de kenmerken van de pen x / y-stretchfactors en / of omtrek in. Stel resizemode in op "gebruiker".
+							Als en alleen als resizemode is ingesteld op "user", wordt de schildpad uitgerekt weergegeven volgens zijn rekfactoren:
+							stretch_wid is rekfactor loodrecht op zijn oriëntatie, stretch_len is rekfactor in de richting van zijn oriëntatie,
+							omtrek bepaalt de breedte van de omtrek van de vorm.
+						</p>
+						<div id="code">
+							<pre>
+turtle.shapesize()
+turtle.resizemode("user")
+
+turtle.shapesize(5, 5, 12)
+turtle.shapesize()
+turtle.shapesize(outline=8)
+turtle.shapesize()
+</pre>
+							<pre id="codeoutput">
+(1.0, 1.0, 1)
+(5, 5, 12)
+(5, 5, 8)</pre>
+						</div>
+					</div>
+
+					<hr>
+
+					<h2>Window control</h2>
+					
+					<p>
+						Methoden van TurtleScreen / Screen en bijbehorende functies
+					</p>
+					<div id="pycode">
+						<h3>Turtle bgcolor</h3>
+						<p>
+							Stel de achtergrondkleur van de TurtleScreen in of geef deze terug
+						</p>
+						<div id="code">
+							<pre>
+screen.bgcolor("orange")
+screen.bgcolor()
+
+screen.bgcolor("#800080")
+screen.bgcolor()</pre>
+							<pre id="codeoutput">
+'orange'
+(128.0, 0.0, 128.0)</pre>
+						</div>
+					</div>
+					
+					<hr>
+
+					<div id="pycode">
+						<h3>Turtle.clear(), clearscreen()</h3>
+						<p>
+							Verwijder alle tekeningen en alle schildpadden van het TurtleScreen. Reset het nu lege TurtleScreen naar de
+							oorspronkelijke staat: witte achtergrond, geen achtergrondafbeelding, geen gebeurtenisbindingen en tracering aan.
+						</p>
+						</div>
+					</div>										
+
 		<div id="Voorbeeld" class="documentatieTopic invisible">
 			<div id="pycode">
 				<h3>Voorbeeld:</h3><br>
